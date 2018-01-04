@@ -12,7 +12,7 @@ namespace Ecran.GUI
         {
             base.OnStartup(e);
 
-            var model = new Model();
+            var model = new Resolution();
             var mainViewModel = new ViewModel(model);
             var view = new Main.View(mainViewModel);
 

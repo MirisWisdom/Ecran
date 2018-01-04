@@ -1,6 +1,6 @@
 ﻿namespace Ecran.GUI.Main
 {
-    public class Model
+    public class Resolution
     {
         public int Width { get; set; }
         public int Height { get; set; }
