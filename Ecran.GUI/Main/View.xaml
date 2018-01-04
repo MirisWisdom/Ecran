@@ -69,15 +69,15 @@
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
                     <Button Content="Browse"
-                        Height="25"
-                        Background="White"
-                        Grid.Column="0"
-                        Margin="0,0,0.5,0"></Button>
+                            Height="25"
+                            Background="White"
+                            Grid.Column="0"
+                            Margin="0,0,0.5,0"></Button>
                     <Button Content="Save"
-                        Height="25"
-                        Background="White"
-                        Grid.Column="1"
-                        Margin="0.5,0,0,0"></Button>
+                            Height="25"
+                            Background="White"
+                            Grid.Column="1"
+                            Margin="0.5,0,0,0"></Button>
                 </Grid>
             </StackPanel>
         </StackPanel>
