@@ -31,6 +31,7 @@
         public ViewModel(Model mainModel)
         {
             model = mainModel;
+            model.SetNativeResolution();
         }
     }
 }
