@@ -3,9 +3,9 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Ecran.GUI.Main"
+        xmlns:resources="clr-namespace:Ecran.GUI.Resources"
         mc:Ignorable="d"
-        Title="ecran.gui"
+        Title="{x:Static resources:Program.Codename}"
         Width="240"
         WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize"
@@ -23,21 +23,22 @@
                     Margin="10">
             <StackPanel Orientation="Horizontal"
                         HorizontalAlignment="Center">
-                <Label Content="écran:"
+                <Label Content="{x:Static resources:Program.Codename}"
                        HorizontalAlignment="Center"
                        FontSize="18"
                        FontFamily="Segoe UI Light"
                        Foreground="#47248e" Padding="0"></Label>
-                <Label Content=" hce video editor"
+                <Label Content="{x:Static resources:Program.Name}"
                        HorizontalAlignment="Center"
                        FontSize="18"
                        FontFamily="Segoe UI Light"
-                       Foreground="Gray" Padding="0"></Label>
+                       Foreground="Gray" Padding="0"
+                       Margin="5,0,0,0"></Label>
             </StackPanel>
             <TextBlock HorizontalAlignment="Center"
                        Foreground="#d3d3d3"
                        Margin="0,5,0,0"
-                       Text="{x:Static local:Resource.Version}">
+                       Text="{x:Static resources:Program.Version}">
             </TextBlock>
         </StackPanel>
 

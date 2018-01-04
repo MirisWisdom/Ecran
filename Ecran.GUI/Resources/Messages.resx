@@ -117,7 +117,25 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Version" xml:space="preserve">
-    <value>0.1.0</value>
+  <data name="BinaryUpdate" xml:space="preserve">
+    <value>Updating the binary...</value>
+  </data>
+  <data name="ChecksumForge" xml:space="preserve">
+    <value>Forging checksum...</value>
+  </data>
+  <data name="InvalidBinary" xml:space="preserve">
+    <value>Selected binary is not valid.</value>
+  </data>
+  <data name="PendingSelection" xml:space="preserve">
+    <value>Please select the profile blam.sav!</value>
+  </data>
+  <data name="PermissionError" xml:space="preserve">
+    <value>Permission error! Run as admin.</value>
+  </data>
+  <data name="Success" xml:space="preserve">
+    <value>Successfully updated the binary!</value>
+  </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>Welcome!</value>
   </data>
 </root>
