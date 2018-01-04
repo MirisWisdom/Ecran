@@ -17,7 +17,7 @@ namespace Ecran.GUI.Main.Console
 
         public void AddLog(string message)
         {
-            model.Message = $"{DateTime.Now.ToString("h:mm:ss tt")}: {message}";
+            model.Message = $"{DateTime.Now.ToString(Resource.TimeFormat)}: {message}";
 
             if (string.IsNullOrWhiteSpace(model.History))
             {

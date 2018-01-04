@@ -135,6 +135,9 @@
   <data name="Success" xml:space="preserve">
     <value>Successfully updated the binary!</value>
   </data>
+  <data name="TimeFormat" xml:space="preserve">
+    <value>h:mm:ss tt</value>
+  </data>
   <data name="Welcome" xml:space="preserve">
     <value>Welcome!</value>
   </data>

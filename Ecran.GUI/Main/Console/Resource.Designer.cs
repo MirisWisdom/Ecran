@@ -115,6 +115,15 @@ namespace Ecran.GUI.Main.Console {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to h:mm:ss tt.
+        /// </summary>
+        internal static string TimeFormat {
+            get {
+                return ResourceManager.GetString("TimeFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Welcome!.
         /// </summary>
         internal static string Welcome {
