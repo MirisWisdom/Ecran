@@ -3,10 +3,10 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:Resources="clr-namespace:Ecran.GUI.Resources"
+        xmlns:Local="clr-namespace:Ecran.GUI.Main"
         xmlns:Console="clr-namespace:Ecran.GUI.Main.Console"
         mc:Ignorable="d"
-        Title="{x:Static Resources:Program.Codename}"
+        Title="{x:Static Local:Resource.Codename}"
         Width="240"
         WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize"
@@ -24,12 +24,12 @@
                     Margin="10">
             <StackPanel Orientation="Horizontal"
                         HorizontalAlignment="Center">
-                <Label Content="{x:Static Resources:Program.Codename}"
+                <Label Content="{x:Static Local:Resource.Codename}"
                        HorizontalAlignment="Center"
                        FontSize="18"
                        FontFamily="Segoe UI Light"
                        Foreground="#47248e" Padding="0"></Label>
-                <Label Content="{x:Static Resources:Program.Name}"
+                <Label Content="{x:Static Local:Resource.Name}"
                        HorizontalAlignment="Center"
                        FontSize="18"
                        FontFamily="Segoe UI Light"
@@ -39,7 +39,7 @@
             <TextBlock HorizontalAlignment="Center"
                        Foreground="#d3d3d3"
                        Margin="0,5,0,0"
-                       Text="{x:Static Resources:Program.Version}">
+                       Text="{x:Static Local:Resource.Version}">
             </TextBlock>
         </StackPanel>
 
