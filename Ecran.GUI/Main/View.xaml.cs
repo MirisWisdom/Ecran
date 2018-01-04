@@ -1,13 +1,13 @@
 ﻿using System.Windows;
 
-namespace Ecran.GUI
+namespace Ecran.GUI.Main
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class View : Window
     {
-        public MainWindow(MainViewModel mainView)
+        public View(ViewModel mainView)
         {
             InitializeComponent();
             DataContext = mainView;

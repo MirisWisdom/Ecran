@@ -1,18 +1,18 @@
-﻿namespace Ecran.GUI
+﻿namespace Ecran.GUI.Main
 {
-    public class MainViewModel
+    public class ViewModel
     {
-        private Main main;
+        private Model model;
 
         public int Width
         {
             get
             {
-                return main.Width;
+                return model.Width;
             }
             set
             {
-                main.Width = value;
+                model.Width = value;
             }
         }
 
@@ -20,17 +20,17 @@
         {
             get
             {
-                return main.Height;
+                return model.Height;
             }
             set
             {
-                main.Height = value;
+                model.Height = value;
             }
         }
 
-        public MainViewModel(Main mainModel)
+        public ViewModel(Model mainModel)
         {
-            main = mainModel;
+            model = mainModel;
         }
     }
 }

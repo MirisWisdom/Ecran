@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Ecran.GUI.Main;
 using System.Windows;
 
 namespace Ecran.GUI
@@ -17,9 +12,9 @@ namespace Ecran.GUI
         {
             base.OnStartup(e);
 
-            var model = new Main();
-            var mainViewModel = new MainViewModel(model);
-            var view = new MainWindow(mainViewModel);
+            var model = new Model();
+            var mainViewModel = new ViewModel(model);
+            var view = new Main.View(mainViewModel);
 
             view.Show();
         }
