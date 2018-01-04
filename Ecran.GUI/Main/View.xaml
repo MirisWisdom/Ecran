@@ -3,9 +3,10 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:resources="clr-namespace:Ecran.GUI.Resources"
+        xmlns:Resources="clr-namespace:Ecran.GUI.Resources"
+        xmlns:Console="clr-namespace:Ecran.GUI.Main.Console"
         mc:Ignorable="d"
-        Title="{x:Static resources:Program.Codename}"
+        Title="{x:Static Resources:Program.Codename}"
         Width="240"
         WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize"
@@ -23,12 +24,12 @@
                     Margin="10">
             <StackPanel Orientation="Horizontal"
                         HorizontalAlignment="Center">
-                <Label Content="{x:Static resources:Program.Codename}"
+                <Label Content="{x:Static Resources:Program.Codename}"
                        HorizontalAlignment="Center"
                        FontSize="18"
                        FontFamily="Segoe UI Light"
                        Foreground="#47248e" Padding="0"></Label>
-                <Label Content="{x:Static resources:Program.Name}"
+                <Label Content="{x:Static Resources:Program.Name}"
                        HorizontalAlignment="Center"
                        FontSize="18"
                        FontFamily="Segoe UI Light"
@@ -38,7 +39,7 @@
             <TextBlock HorizontalAlignment="Center"
                        Foreground="#d3d3d3"
                        Margin="0,5,0,0"
-                       Text="{x:Static resources:Program.Version}">
+                       Text="{x:Static Resources:Program.Version}">
             </TextBlock>
         </StackPanel>
 
@@ -85,15 +86,7 @@
         <StackPanel Grid.Row="2"
                     VerticalAlignment="Center"
                     Margin="10,0,10,10">
-            <TextBox
-                    IsReadOnly="True"
-                    Background="#222"
-                    FontFamily="Consolas"
-                    Foreground="Gray"
-                    Padding="10"
-                    Height="100">
-                C:\
-            </TextBox>
+            <Console:View></Console:View>
         </StackPanel>
     </Grid>
 </Window>

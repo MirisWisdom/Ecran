@@ -1,9 +1,11 @@
 ﻿namespace Ecran.GUI.Main
 {
-    public class Resolution
+    public class Model
     {
         public int Width { get; set; }
         public int Height { get; set; }
+
+        public string Path { get; set; }
 
         public void SetNativeResolution()
         {

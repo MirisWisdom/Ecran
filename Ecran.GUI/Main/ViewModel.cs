@@ -2,7 +2,7 @@
 {
     public class ViewModel
     {
-        private Resolution model;
+        private Model model;
 
         public int Width
         {
@@ -28,7 +28,7 @@
             }
         }
 
-        public ViewModel(Resolution mainModel)
+        public ViewModel(Model mainModel)
         {
             model = mainModel;
             model.SetNativeResolution();
