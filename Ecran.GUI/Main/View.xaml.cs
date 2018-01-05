@@ -1,4 +1,5 @@
 ﻿using Echoic.Binary;
+using Echoic.Checksum;
 using Microsoft.Win32;
 using System;
 using System.Windows;
@@ -35,6 +36,13 @@ namespace Ecran.GUI.Main
                     (byte) (viewModel.Height / divideValue),
                 };
             })(), offsetValue);
+
+            new Blam(viewModel.Path).Patch(new Func<byte[]>(() =>
+            {
+                var forge = new Forge(viewModel.Path).Calculate();
+                Array.Reverse(forge);
+                return forge;
+            })(), Checksum.FileLength);
         }
 
         void Browse(object sender, RoutedEventArgs e)
