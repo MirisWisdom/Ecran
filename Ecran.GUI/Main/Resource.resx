@@ -124,7 +124,7 @@
     <value>écran</value>
   </data>
   <data name="Name" xml:space="preserve">
-    <value>hce video editor</value>
+    <value>hce resolution editor</value>
   </data>
   <data name="TimeFormat" xml:space="preserve">
     <value>h:mm:ss tt</value>
