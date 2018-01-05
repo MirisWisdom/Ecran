@@ -35,11 +35,9 @@
                        Foreground="Gray" Padding="0"
                        Margin="5,0,0,0"></Label>
             </StackPanel>
-            <TextBlock HorizontalAlignment="Center"
-                       Foreground="#d3d3d3"
-                       Margin="0,5,0,0"
-                       Text="{x:Static Local:Resource.Version}">
-            </TextBlock>
+            <Label Content="{Binding Version}"
+                    HorizontalAlignment="Center"
+                    Foreground="#d3d3d3"/>
         </StackPanel>
 
         <!-- Body -->

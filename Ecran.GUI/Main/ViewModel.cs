@@ -9,10 +9,17 @@ namespace Ecran.GUI.Main
 
         public event PropertyChangedEventHandler PropertyChanged;
 
+        public string Version {
+            get {
+                return $"{Resource.Version} // {Resource.Author.ToUpper()}";
+            }
+        }
+
         public int Width {
             get {
                 return model.Width;
-            } set {
+            }
+            set {
                 if (value != model.Width)
                 {
                     model.Width = value;
@@ -24,7 +31,8 @@ namespace Ecran.GUI.Main
         public int Height {
             get {
                 return model.Height;
-            } set {
+            }
+            set {
                 if (value != model.Height)
                 {
                     model.Height = value;
@@ -36,7 +44,8 @@ namespace Ecran.GUI.Main
         public string Path {
             get {
                 return model.Path;
-            } set {
+            }
+            set {
                 if (value != model.Path)
                 {
                     model.Path = value;
