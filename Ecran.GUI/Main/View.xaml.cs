@@ -1,4 +1,5 @@
 ﻿using Echoic.Binary;
+using Microsoft.Win32;
 using System;
 using System.Windows;
 
@@ -36,6 +37,16 @@ namespace Ecran.GUI.Main
                     (byte) (viewModel.Height / divideValue),
                 };
             })(), offsetValue);
+        }
+
+        private void Browse(object sender, RoutedEventArgs e)
+        {
+            var openFileDialog = new OpenFileDialog();
+
+            if (openFileDialog.ShowDialog() == true)
+            {
+                viewModel.Path = openFileDialog.FileName;
+            }
         }
     }
 }

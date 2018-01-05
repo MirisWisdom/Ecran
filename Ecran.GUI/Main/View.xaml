@@ -71,7 +71,7 @@
                             Height="25"
                             Background="White"
                             Grid.Column="0"
-                            Margin="0,0,0.5,0"></Button>
+                            Margin="0,0,0.5,0" Click="Browse"></Button>
                     <Button Content="Save"
                             Height="25"
                             Background="White"
