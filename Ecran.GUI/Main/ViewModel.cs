@@ -6,38 +6,29 @@ namespace Ecran.GUI.Main
     {
         private Model model;
 
-        public int Width
-        {
-            get
-            {
+        public int Width {
+            get {
                 return model.Width;
             }
-            set
-            {
+            set {
                 model.Width = value;
             }
         }
 
-        public int Height
-        {
-            get
-            {
+        public int Height {
+            get {
                 return model.Height;
             }
-            set
-            {
+            set {
                 model.Height = value;
             }
         }
 
-        public string Path
-        {
-            get
-            {
+        public string Path {
+            get {
                 return model.Path;
             }
-            set
-            {
+            set {
                 model.Path = value;
             }
         }

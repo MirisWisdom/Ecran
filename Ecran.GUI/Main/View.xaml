@@ -87,7 +87,7 @@
         <StackPanel Grid.Row="2"
                     VerticalAlignment="Center"
                     Margin="10,0,10,10">
-            <Console:View></Console:View>
+            <Console:View x:Name="Console"></Console:View>
         </StackPanel>
     </Grid>
 </Window>

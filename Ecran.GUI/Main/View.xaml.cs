@@ -11,7 +11,7 @@ namespace Ecran.GUI.Main
     {
         readonly ViewModel viewModel;
 
-        readonly int divideValue = (int) Math.Pow(2, 8);
+        readonly int divideValue = (int)Math.Pow(2, 8);
         readonly int offsetValue = 0xA68;
 
         public View(ViewModel mainView)

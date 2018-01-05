@@ -9,8 +9,8 @@
 
         public void SetNativeResolution()
         {
-            Width = (int) System.Windows.SystemParameters.PrimaryScreenWidth;
-            Height = (int) System.Windows.SystemParameters.PrimaryScreenHeight;
+            Width = (int)System.Windows.SystemParameters.PrimaryScreenWidth;
+            Height = (int)System.Windows.SystemParameters.PrimaryScreenHeight;
         }
     }
 }

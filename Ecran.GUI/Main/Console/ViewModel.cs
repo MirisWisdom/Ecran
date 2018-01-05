@@ -27,7 +27,6 @@ namespace Ecran.GUI.Main.Console
             {
                 model.History = $"{model.History}\n{model.Message}";
             }
-
         }
 
         public ViewModel(Model consoleModel)

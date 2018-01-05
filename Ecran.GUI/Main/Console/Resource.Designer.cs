@@ -8,10 +8,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Ecran.GUI.Main.Console {
+namespace Ecran.GUI.Main.Console
+{
     using System;
-    
-    
+
+
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -22,30 +23,33 @@ namespace Ecran.GUI.Main.Console {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resource {
-        
+    internal class Resource
+    {
+
         private static global::System.Resources.ResourceManager resourceMan;
-        
+
         private static global::System.Globalization.CultureInfo resourceCulture;
-        
+
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Resource() {
+        internal Resource()
+        {
         }
-        
+
         /// <summary>
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
-                if (object.ReferenceEquals(resourceMan, null)) {
+                if (object.ReferenceEquals(resourceMan, null))
+                {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Ecran.GUI.Main.Console.Resource", typeof(Resource).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
             }
         }
-        
+
         /// <summary>
         ///   Overrides the current thread's CurrentUICulture property for all
         ///   resource lookups using this strongly typed resource class.
@@ -59,7 +63,7 @@ namespace Ecran.GUI.Main.Console {
                 resourceCulture = value;
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Updating the binary....
         /// </summary>
@@ -68,7 +72,7 @@ namespace Ecran.GUI.Main.Console {
                 return ResourceManager.GetString("BinaryUpdate", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Forging checksum....
         /// </summary>
@@ -77,7 +81,7 @@ namespace Ecran.GUI.Main.Console {
                 return ResourceManager.GetString("ChecksumForge", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Selected binary is not valid..
         /// </summary>
@@ -86,7 +90,7 @@ namespace Ecran.GUI.Main.Console {
                 return ResourceManager.GetString("InvalidBinary", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Please select the profile blam.sav!.
         /// </summary>
@@ -95,7 +99,7 @@ namespace Ecran.GUI.Main.Console {
                 return ResourceManager.GetString("PendingSelection", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Permission error! Run as admin..
         /// </summary>
@@ -104,7 +108,7 @@ namespace Ecran.GUI.Main.Console {
                 return ResourceManager.GetString("PermissionError", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Successfully updated the binary!.
         /// </summary>
@@ -113,7 +117,7 @@ namespace Ecran.GUI.Main.Console {
                 return ResourceManager.GetString("Success", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to h:mm:ss tt.
         /// </summary>
@@ -122,7 +126,7 @@ namespace Ecran.GUI.Main.Console {
                 return ResourceManager.GetString("TimeFormat", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Welcome!.
         /// </summary>
