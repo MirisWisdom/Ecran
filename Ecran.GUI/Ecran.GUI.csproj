@@ -124,5 +124,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Echoic.Library\Echoic.Binary\Echoic.Binary.csproj">
+      <Project>{786bf655-fc01-4bb1-a429-3ac3f55caa31}</Project>
+      <Name>Echoic.Binary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Echoic.Library\Echoic.Checksum\Echoic.Checksum.csproj">
+      <Project>{5c905e88-325f-4128-bcdd-1086ef56c727}</Project>
+      <Name>Echoic.Checksum</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

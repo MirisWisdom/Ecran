@@ -1,0 +1,3 @@
+[submodule "Echoic.Library"]
+	path = Echoic.Library
+	url = git@github.com:yumiris/Echoic.Library.git

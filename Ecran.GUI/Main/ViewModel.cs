@@ -1,4 +1,6 @@
-﻿namespace Ecran.GUI.Main
+﻿using System;
+
+namespace Ecran.GUI.Main
 {
     public class ViewModel
     {
@@ -25,6 +27,18 @@
             set
             {
                 model.Height = value;
+            }
+        }
+
+        public string Path
+        {
+            get
+            {
+                return model.Path;
+            }
+            set
+            {
+                model.Path = value;
             }
         }
 

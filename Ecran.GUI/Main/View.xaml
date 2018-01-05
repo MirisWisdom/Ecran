@@ -77,7 +77,8 @@
                             Height="25"
                             Background="White"
                             Grid.Column="1"
-                            Margin="0.5,0,0,0"></Button>
+                            Margin="0.5,0,0,0"
+                            Click="Save"></Button>
                 </Grid>
             </StackPanel>
         </StackPanel>
