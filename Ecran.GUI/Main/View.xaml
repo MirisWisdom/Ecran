@@ -10,8 +10,9 @@
         WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize"
         SizeToContent="Height">
-    <Grid>
+    <Grid Margin="10">
         <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
@@ -19,30 +20,31 @@
 
         <!-- Header -->
         <StackPanel VerticalAlignment="Center"
-                    Grid.Row="0"
-                    Margin="10">
+                    Grid.Row="0">
             <StackPanel Orientation="Horizontal"
                         HorizontalAlignment="Center">
                 <Label Content="{x:Static Local:Resource.Codename}"
                        HorizontalAlignment="Center"
                        FontSize="18"
                        FontFamily="Segoe UI Light"
-                       Foreground="#47248e" Padding="0"></Label>
+                       Foreground="#47248e" Padding="0"
+                       Margin="0,0,2.5,0"></Label>
                 <Label Content="{x:Static Local:Resource.Name}"
                        HorizontalAlignment="Center"
                        FontSize="18"
                        FontFamily="Segoe UI Light"
                        Foreground="Gray" Padding="0"
-                       Margin="5,0,0,0"></Label>
+                       Margin="2.5,0,0,0"></Label>
             </StackPanel>
             <Label Content="{Binding Version}"
-                    HorizontalAlignment="Center"
-                    Foreground="#d3d3d3"/>
+                   HorizontalAlignment="Center"
+                   Foreground="#d3d3d3"/>
         </StackPanel>
 
-        <!-- Body -->
-        <StackPanel Grid.Row="1" Margin="10,0,10,10"
-                    VerticalAlignment="Center">
+        <!-- Video Options -->
+        <StackPanel Grid.Row="1"
+                    VerticalAlignment="Center"
+                    Margin="0,5,0,0">
             <Label Content="Resolution:"/>
             <DockPanel>
                 <Label Content="Width:"
@@ -58,33 +60,43 @@
                          MaxLength="5"
                          Text="{Binding Height}"></TextBox>
             </DockPanel>
-            <StackPanel Margin="0,5,0,0">
-                <Label Content="Operation:"/>
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                    </Grid.ColumnDefinitions>
-                    <Button Content="Browse"
-                            Height="25"
-                            Background="White"
-                            Grid.Column="0"
-                            Margin="0,0,0.5,0" Click="Browse"></Button>
-                    <Button Content="Save"
-                            Height="25"
-                            Background="White"
-                            Grid.Column="1"
-                            Margin="0.5,0,0,0"
-                            Click="Save"></Button>
-                </Grid>
-                <Label Content="Location:"
-                       Margin="0,5,0,0"/>
-                <TextBox VerticalContentAlignment="Center"
-                         MaxLength="5"
-                         Text="{Binding Path}"
-                         Height="25"
-                         IsReadOnly="True"></TextBox>
-            </StackPanel>
+        </StackPanel>
+        
+        <!-- Binary Operations -->
+        <StackPanel Grid.Row="2"
+                    VerticalAlignment="Center"
+                    Margin="0,5,0,0">
+            <Label Content="Operation:"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button Content="Browse"
+                        Height="25"
+                        Background="White"
+                        Grid.Column="0"
+                        Margin="0,0,0.5,0"
+                        Click="Browse"></Button>
+                <Button Content="Save"
+                        Height="25"
+                        Background="White"
+                        Grid.Column="1"
+                        Margin="0.5,0,0,0"
+                        Click="Save"></Button>
+            </Grid>
+        </StackPanel>
+        
+        <!-- Location & Debug -->
+        <StackPanel Grid.Row="3"
+                    VerticalAlignment="Center"
+                    Margin="0,5,0,0">
+            <Label Content="Location:"/>
+            <TextBox VerticalContentAlignment="Center"
+                     MaxLength="5"
+                     Text="{Binding Path}"
+                     Height="25"
+                     IsReadOnly="True"></TextBox>
         </StackPanel>
     </Grid>
 </Window>
