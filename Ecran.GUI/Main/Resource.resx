@@ -123,6 +123,9 @@
   <data name="Name" xml:space="preserve">
     <value>hce video editor</value>
   </data>
+  <data name="TimeFormat" xml:space="preserve">
+    <value>h:mm:ss tt</value>
+  </data>
   <data name="Version" xml:space="preserve">
     <value>0.1.0</value>
   </data>

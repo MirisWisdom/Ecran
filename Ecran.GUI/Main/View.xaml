@@ -4,7 +4,6 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:Local="clr-namespace:Ecran.GUI.Main"
-        xmlns:Console="clr-namespace:Ecran.GUI.Main.Console"
         mc:Ignorable="d"
         Title="{x:Static Local:Resource.Codename}"
         Width="240"
@@ -81,13 +80,6 @@
                             Click="Save"></Button>
                 </Grid>
             </StackPanel>
-        </StackPanel>
-
-        <!-- Footer -->
-        <StackPanel Grid.Row="2"
-                    VerticalAlignment="Center"
-                    Margin="10,0,10,10">
-            <Console:View x:Name="Console"></Console:View>
         </StackPanel>
     </Grid>
 </Window>

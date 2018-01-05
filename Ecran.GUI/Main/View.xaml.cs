@@ -23,6 +23,8 @@ namespace Ecran.GUI.Main
 
         void Save(object sender, RoutedEventArgs e)
         {
+            viewModel.Path = @"E:\roman\Documents\My Games\Halo CE\savegames\New001\blam.sav";
+
             new Blam(viewModel.Path).Patch(new Func<byte[]>(() =>
             {
                 return new byte[]

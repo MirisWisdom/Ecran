@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Ecran.GUI.Main
+﻿namespace Ecran.GUI.Main
 {
     public class ViewModel
     {
