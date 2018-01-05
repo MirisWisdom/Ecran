@@ -79,6 +79,13 @@
                             Margin="0.5,0,0,0"
                             Click="Save"></Button>
                 </Grid>
+                <Label Content="Location:"
+                       Margin="0,5,0,0"/>
+                <TextBox VerticalContentAlignment="Center"
+                         MaxLength="5"
+                         Text="{Binding Path}"
+                         Height="25"
+                         IsReadOnly="True"></TextBox>
             </StackPanel>
         </StackPanel>
     </Grid>
