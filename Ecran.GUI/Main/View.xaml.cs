@@ -25,24 +25,33 @@ namespace Ecran.GUI.Main
 
         void Save(object sender, RoutedEventArgs e)
         {
-            new Blam(viewModel.Path).Patch(new Func<byte[]>(() =>
+            try
             {
-                return new byte[]
+                new Blam(viewModel.Path).Patch(new Func<byte[]>(() =>
                 {
+                    return new byte[]
+                    {
                     (byte) (viewModel.Width % divideValue),
                     (byte) (viewModel.Width / divideValue),
 
                     (byte) (viewModel.Height % divideValue),
                     (byte) (viewModel.Height / divideValue),
-                };
-            })(), offsetValue);
+                    };
+                })(), offsetValue);
 
-            new Blam(viewModel.Path).Patch(new Func<byte[]>(() =>
+                new Blam(viewModel.Path).Patch(new Func<byte[]>(() =>
+                {
+                    var forge = new Forge(viewModel.Path).Calculate();
+                    Array.Reverse(forge);
+                    return forge;
+                })(), Checksum.FileLength);
+
+                MessageBox.Show("Successfully applied the new resolution!");
+            } catch (Exception ex)
             {
-                var forge = new Forge(viewModel.Path).Calculate();
-                Array.Reverse(forge);
-                return forge;
-            })(), Checksum.FileLength);
+                MessageBox.Show(ex.Message);
+            }
+
         }
 
         void Browse(object sender, RoutedEventArgs e)
