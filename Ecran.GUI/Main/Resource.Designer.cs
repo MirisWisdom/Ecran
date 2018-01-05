@@ -61,7 +61,7 @@ namespace Ecran.GUI.Main {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to yumiris.
+        ///   Looks up a localized string similar to YUMIRIS.
         /// </summary>
         public static string Author {
             get {

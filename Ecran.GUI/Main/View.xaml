@@ -9,7 +9,7 @@
         Width="240"
         WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize"
-        SizeToContent="Height">
+        SizeToContent="Height" Icon="/Ecran.GUI;component/icon.ico">
     <Grid Margin="10">
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
@@ -36,15 +36,23 @@
                        Foreground="Gray" Padding="0"
                        Margin="2.5,0,0,0"></Label>
             </StackPanel>
-            <Label Content="{Binding Version}"
-                   HorizontalAlignment="Center"
-                   Foreground="#d3d3d3"/>
+            <StackPanel Orientation="Horizontal"
+                        HorizontalAlignment="Center">
+                <Label Content="{x:Static Local:Resource.Version}"
+                       HorizontalAlignment="Center"
+                       Foreground="#d3d3d3"/>
+                <Label Content="//"
+                       HorizontalAlignment="Center"
+                       Foreground="#d3d3d3"/>
+                <Label Content="{x:Static Local:Resource.Author}"
+                       HorizontalAlignment="Center"
+                       Foreground="#d3d3d3"/>
+            </StackPanel>
         </StackPanel>
 
         <!-- Video Options -->
         <StackPanel Grid.Row="1"
-                    VerticalAlignment="Center"
-                    Margin="0,5,0,0">
+                    VerticalAlignment="Center">
             <Label Content="Resolution:"/>
             <DockPanel>
                 <Label Content="Width:"
