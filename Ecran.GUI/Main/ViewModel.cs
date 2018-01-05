@@ -5,7 +5,7 @@ namespace Ecran.GUI.Main
 {
     public class ViewModel : INotifyPropertyChanged
     {
-        private Model model;
+        Model model;
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -60,7 +60,7 @@ namespace Ecran.GUI.Main
             model.SetNativeResolution();
         }
 
-        private void NotifyPropertyChanged([CallerMemberName] string propertyName = "")
+        void NotifyPropertyChanged([CallerMemberName] string propertyName = "")
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
