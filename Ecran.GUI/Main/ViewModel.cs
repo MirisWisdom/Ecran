@@ -10,6 +10,16 @@ namespace Ecran.GUI.Main
 
         public event PropertyChangedEventHandler PropertyChanged;
 
+        void NotifyPropertyChanged([CallerMemberName] string propertyName = "")
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        public ViewModel(Model mainModel)
+        {
+            model = mainModel;
+        }
+
         public string Version {
             get {
                 return $"{Resource.Version} // {Resource.Author.ToUpper()}";
@@ -51,17 +61,6 @@ namespace Ecran.GUI.Main
                     NotifyPropertyChanged();
                 }
             }
-        }
-
-        public ViewModel(Model mainModel)
-        {
-            model = mainModel;
-            model.SetNativeResolution();
-        }
-
-        void NotifyPropertyChanged([CallerMemberName] string propertyName = "")
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }
