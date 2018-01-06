@@ -62,7 +62,7 @@
                          MaxLength="5"
                          Text="{Binding Width}"/>
             </DockPanel>
-            <DockPanel Margin="0,1,0,0">
+            <DockPanel Margin="0,2,0,0">
                 <Label Content="Height:"
                        Width="50"/>
                 <TextBox VerticalContentAlignment="Center"
@@ -71,7 +71,7 @@
             </DockPanel>
         </StackPanel>
         
-        <!-- Location & Debug -->
+        <!-- Location & Operations -->
         <StackPanel Grid.Row="2"
                     VerticalAlignment="Center"
                     Margin="0,5,0,0">
@@ -82,40 +82,33 @@
                 Text="{Binding Path}"
                 Height="25"
                 IsReadOnly="True"/>
-            <Button Grid.Column="1"
-                    Content="Browse blam.sav"
-                    Height="25"
-                    Background="White"
-                    Margin="0,1,0,0"
-                    Click="Browse"/>
-        </StackPanel>
-
-        <!-- Binary Operations -->
-        <StackPanel Grid.Row="3"
-                    VerticalAlignment="Center"
-                    Margin="0,5,0,0">
-            <Label Content="Operation:"/>
-            <Grid>
+            <Grid Margin="0,2,0,0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <Button Content="Help"
+                <Button Grid.Column="0"
+                        Content="Detect blam.sav"
                         Height="25"
                         Background="White"
-                        Grid.Column="0"
-                        Margin="0,0,0.5,0"
-                        Click="Save"/>
-                <Button Content="Save"
+                        Margin="0,0,1,0"/>
+                <Button Grid.Column="1"
+                        Content="Browse blam.sav"
                         Height="25"
                         Background="White"
-                        Grid.Column="1"
-                        Margin="0.5,0,0,0"
-                        Click="Save"/>
+                        Margin="1,0,0,0"
+                        Click="Browse"/>
             </Grid>
+            <Button Content="Update Profile"
+                    Height="25"
+                    Margin="0,2,0,0"
+                    Background="White"
+                    Grid.Column="1"
+                    Click="Save"/>
         </StackPanel>
 
-        <StackPanel Grid.Row="4"
+        <!-- Debug Output -->
+        <StackPanel Grid.Row="3"
                     VerticalAlignment="Center"
                     Margin="0,5,0,0">
             <Label Content="Output:"/>
@@ -124,6 +117,26 @@
                      Height="100"
                      FontFamily="Consolas"
                      Foreground="Gray"/>
+        </StackPanel>
+
+        <!-- Additional Information -->
+        <StackPanel Grid.Row="4">
+            <Grid Margin="0,10,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" Content="About"
+                        Height="25"
+                        Background="White"
+                        Margin="0,0,1,0"
+                        Click="Save"/>
+                <Button Grid.Column="1" Content="Help"
+                        Height="25"
+                        Background="White"
+                        Margin="1,0,0,0"
+                        Click="Save"/>
+            </Grid>
         </StackPanel>
     </Grid>
 </Window>
