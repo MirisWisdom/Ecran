@@ -125,7 +125,8 @@
                      Background="#222222"
                      Height="100"
                      FontFamily="Consolas"
-                     Foreground="Gray"/>
+                     Foreground="Gray"
+                     IsReadOnly="True"/>
         </StackPanel>
 
         <!-- Additional Information -->
