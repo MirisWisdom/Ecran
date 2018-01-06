@@ -71,8 +71,27 @@
             </DockPanel>
         </StackPanel>
         
-        <!-- Binary Operations -->
+        <!-- Location & Debug -->
         <StackPanel Grid.Row="2"
+                    VerticalAlignment="Center"
+                    Margin="0,5,0,0">
+            <Label Content="Location:"/>
+            <TextBox
+                VerticalContentAlignment="Center"
+                MaxLength="5"
+                Text="{Binding Path}"
+                Height="25"
+                IsReadOnly="True"/>
+            <Button Grid.Column="1"
+                    Content="Browse blam.sav"
+                    Height="25"
+                    Background="White"
+                    Margin="0,1,0,0"
+                    Click="Browse"/>
+        </StackPanel>
+
+        <!-- Binary Operations -->
+        <StackPanel Grid.Row="3"
                     VerticalAlignment="Center"
                     Margin="0,5,0,0">
             <Label Content="Operation:"/>
@@ -81,12 +100,12 @@
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <Button Content="Browse"
+                <Button Content="Help"
                         Height="25"
                         Background="White"
                         Grid.Column="0"
                         Margin="0,0,0.5,0"
-                        Click="Browse"/>
+                        Click="Save"/>
                 <Button Content="Save"
                         Height="25"
                         Background="White"
@@ -94,18 +113,6 @@
                         Margin="0.5,0,0,0"
                         Click="Save"/>
             </Grid>
-        </StackPanel>
-        
-        <!-- Location & Debug -->
-        <StackPanel Grid.Row="3"
-                    VerticalAlignment="Center"
-                    Margin="0,5,0,0">
-            <Label Content="Location:"/>
-            <TextBox VerticalContentAlignment="Center"
-                     MaxLength="5"
-                     Text="{Binding Path}"
-                     Height="25"
-                     IsReadOnly="True"/>
         </StackPanel>
 
         <StackPanel Grid.Row="4"
