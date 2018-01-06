@@ -126,7 +126,11 @@
                      Height="100"
                      FontFamily="Consolas"
                      Foreground="Gray"
-                     IsReadOnly="True"/>
+                     IsReadOnly="True"
+                     x:Name="ConsoleTextBox"
+                     TextWrapping="WrapWithOverflow"
+                     FontSize="10"
+                     Text="Welcome!"/>
         </StackPanel>
 
         <!-- Additional Information -->
@@ -140,7 +144,7 @@
                         Height="25"
                         Background="White"
                         Margin="0,0,1,0"
-                        Click="Save"/>
+                        Click="About"/>
                 <Button Grid.Column="1" Content="Help"
                         Height="25"
                         Background="White"

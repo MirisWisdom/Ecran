@@ -12,6 +12,8 @@ namespace Ecran.GUI.Main
     /// </summary>
     public partial class View : Window
     {
+        readonly ConsoleTextBox console;
+
         readonly ViewModel viewModel;
 
         readonly int divideValue = (int)Math.Pow(2, 8);
@@ -22,6 +24,8 @@ namespace Ecran.GUI.Main
             InitializeComponent();
             viewModel = mainView;
             DataContext = viewModel;
+
+            console = new ConsoleTextBox(ConsoleTextBox);
         }
 
         void Save(object sender, RoutedEventArgs e)
@@ -47,11 +51,11 @@ namespace Ecran.GUI.Main
                     return forge;
                 })(), Checksum.FileLength);
 
-                MessageBox.Show("Successfully applied the new resolution!");
+                console.Show(Resource.SuccessfulPatch);
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                console.Show(ex.Message);
             }
 
         }
@@ -60,7 +64,7 @@ namespace Ecran.GUI.Main
         {
             var openFileDialog = new OpenFileDialog
             {
-                Filter = "Blam files (*.sav)|*.sav"
+                Filter = Resource.FileFilter
             };
 
             if (openFileDialog.ShowDialog() == true)
@@ -74,11 +78,17 @@ namespace Ecran.GUI.Main
             try
             {
                 viewModel.Path = new BlamDetect().Find();
+                console.Show("Detected:\n" + viewModel.Path);
             }
             catch (FileNotFoundException ex)
             {
-                MessageBox.Show("Could not find the necessarily files!");
+                console.Show(ex.Message);
             }
+        }
+
+        private void About(object sender, RoutedEventArgs e)
+        {
+            console.Show(Resource.AboutString);
         }
     }
 }

@@ -68,6 +68,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Controls\ConsoleTextBox.cs" />
     <Compile Include="Main\Model.cs" />
     <Compile Include="Main\Resolution.cs" />
     <Compile Include="Main\Resource.Designer.cs">

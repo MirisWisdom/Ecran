@@ -61,6 +61,15 @@ namespace Ecran.GUI.Main {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to A program which patches the HCE native resolution. Brought to you by Yumiris &amp; Caelum!.
+        /// </summary>
+        public static string AboutString {
+            get {
+                return ResourceManager.GetString("AboutString", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to YUMIRIS.
         /// </summary>
         public static string Author {
@@ -79,11 +88,29 @@ namespace Ecran.GUI.Main {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Blam files (*.sav)|*.sav.
+        /// </summary>
+        public static string FileFilter {
+            get {
+                return ResourceManager.GetString("FileFilter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to hce resolution editor.
         /// </summary>
         public static string Name {
             get {
                 return ResourceManager.GetString("Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Successfully applied the new resolution!.
+        /// </summary>
+        public static string SuccessfulPatch {
+            get {
+                return ResourceManager.GetString("SuccessfulPatch", resourceCulture);
             }
         }
         

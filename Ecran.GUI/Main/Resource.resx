@@ -117,14 +117,23 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AboutString" xml:space="preserve">
+    <value>A program which patches the HCE native resolution. Brought to you by Yumiris &amp; Caelum!</value>
+  </data>
   <data name="Author" xml:space="preserve">
     <value>YUMIRIS</value>
   </data>
   <data name="Codename" xml:space="preserve">
     <value>écran</value>
   </data>
+  <data name="FileFilter" xml:space="preserve">
+    <value>Blam files (*.sav)|*.sav</value>
+  </data>
   <data name="Name" xml:space="preserve">
     <value>hce resolution editor</value>
+  </data>
+  <data name="SuccessfulPatch" xml:space="preserve">
+    <value>Successfully applied the new resolution!</value>
   </data>
   <data name="TimeFormat" xml:space="preserve">
     <value>h:mm:ss tt</value>
