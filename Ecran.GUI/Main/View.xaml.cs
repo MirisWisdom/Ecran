@@ -58,7 +58,10 @@ namespace Ecran.GUI.Main
 
         void Browse(object sender, RoutedEventArgs e)
         {
-            var openFileDialog = new OpenFileDialog();
+            var openFileDialog = new OpenFileDialog
+            {
+                Filter = "Blam files (*.sav)|*.sav"
+            };
 
             if (openFileDialog.ShowDialog() == true)
             {
