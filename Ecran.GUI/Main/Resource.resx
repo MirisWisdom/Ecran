@@ -118,10 +118,10 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AboutString" xml:space="preserve">
-    <value>A program which patches the HCE native resolution. Brought to you by Yumiris &amp; Caelum!</value>
+    <value>Natively patch your HCE resolution. Brought to you by Yumiris &amp; Yuviris!</value>
   </data>
   <data name="Author" xml:space="preserve">
-    <value>YUMIRIS</value>
+    <value>YUMIRIS &amp; YUVIRIS</value>
   </data>
   <data name="Codename" xml:space="preserve">
     <value>écran</value>
@@ -142,6 +142,6 @@
     <value>h:mm:ss tt</value>
   </data>
   <data name="Version" xml:space="preserve">
-    <value>0.1.0</value>
+    <value>0.2.0</value>
   </data>
 </root>

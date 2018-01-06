@@ -22,6 +22,8 @@ namespace Ecran.GUI.Main
             DataContext = viewModel;
 
             console = new ConsoleTextBox(ConsoleTextBox);
+
+            viewModel.SelectedResolution = viewModel.Resolutions[0];
         }
 
         void Save(object sender, RoutedEventArgs e)

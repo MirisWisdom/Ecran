@@ -61,7 +61,7 @@ namespace Ecran.GUI.Main {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A program which patches the HCE native resolution. Brought to you by Yumiris &amp; Caelum!.
+        ///   Looks up a localized string similar to Natively patch your HCE resolution. Brought to you by Yumiris &amp; Yuviris!.
         /// </summary>
         public static string AboutString {
             get {
@@ -70,7 +70,7 @@ namespace Ecran.GUI.Main {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to YUMIRIS.
+        ///   Looks up a localized string similar to YUMIRIS &amp; YUVIRIS.
         /// </summary>
         public static string Author {
             get {
@@ -133,7 +133,7 @@ namespace Ecran.GUI.Main {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 0.1.0.
+        ///   Looks up a localized string similar to 0.2.0.
         /// </summary>
         public static string Version {
             get {

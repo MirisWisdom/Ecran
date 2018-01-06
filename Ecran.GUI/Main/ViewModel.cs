@@ -43,9 +43,26 @@ namespace Ecran.GUI.Main
             get {
                 return new List<Resolution>
                 {
-                    new Resolution {Width = 2560, Height = 1440},
-                    new Resolution {Width = 1920, Height = 1200},
-                    new Resolution {Width = 1920, Height = 1080},
+                    new Resolution { Width = 800, Height =  600 },
+                    new Resolution { Width = 1024, Height =  600 },
+                    new Resolution { Width = 1024, Height =  768 },
+                    new Resolution { Width = 1152, Height =  864 },
+                    new Resolution { Width = 1280, Height =  720 },
+                    new Resolution { Width = 1280, Height =  768 },
+                    new Resolution { Width = 1280, Height =  800 },
+                    new Resolution { Width = 1280, Height =  1024 },
+                    new Resolution { Width = 1360, Height =  768 },
+                    new Resolution { Width = 1366, Height =  768 },
+                    new Resolution { Width = 1440, Height =  900 },
+                    new Resolution { Width = 1536, Height =  864 },
+                    new Resolution { Width = 1600, Height =  900 },
+                    new Resolution { Width = 1680, Height =  1050 },
+                    new Resolution { Width = 1920, Height =  1080 },
+                    new Resolution { Width = 1920, Height =  1200 },
+                    new Resolution { Width = 2560, Height =  1080 },
+                    new Resolution { Width = 2560, Height =  1440 },
+                    new Resolution { Width = 3440, Height =  1440 },
+                    new Resolution { Width = 3840, Height =  2160 },
                 };
             }
         }
