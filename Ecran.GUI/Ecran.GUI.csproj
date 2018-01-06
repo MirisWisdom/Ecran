@@ -71,6 +71,7 @@
     <Compile Include="Controls\ConsoleTextBox.cs" />
     <Compile Include="Main\Model.cs" />
     <Compile Include="Main\Resolution.cs" />
+    <Compile Include="Main\ResolutionPatcher.cs" />
     <Compile Include="Main\Resource.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

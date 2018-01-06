@@ -1,5 +1,4 @@
 ﻿using Echoic.Binary;
-using Echoic.Checksum;
 using Microsoft.Win32;
 using System;
 using System.IO;
@@ -16,9 +15,6 @@ namespace Ecran.GUI.Main
 
         readonly ViewModel viewModel;
 
-        readonly int divideValue = (int)Math.Pow(2, 8);
-        readonly int offsetValue = 0xA68;
-
         public View(ViewModel mainView)
         {
             InitializeComponent();
@@ -32,24 +28,9 @@ namespace Ecran.GUI.Main
         {
             try
             {
-                new Blam(viewModel.Path).Patch(new Func<byte[]>(() =>
-                {
-                    return new byte[]
-                    {
-                        (byte) (viewModel.SelectedResolution.Width % divideValue),
-                        (byte) (viewModel.SelectedResolution.Width / divideValue),
-
-                        (byte) (viewModel.SelectedResolution.Height % divideValue),
-                        (byte) (viewModel.SelectedResolution.Height / divideValue),
-                    };
-                })(), offsetValue);
-
-                new Blam(viewModel.Path).Patch(new Func<byte[]>(() =>
-                {
-                    var forge = new Forge(viewModel.Path).Calculate();
-                    Array.Reverse(forge);
-                    return forge;
-                })(), Checksum.FileLength);
+                new ResolutionPatcher(new Blam(viewModel.Path))
+                    .ApplyResolution(viewModel.SelectedResolution)
+                    .ApplyNewHashing();
 
                 console.Show(Resource.SuccessfulPatch);
             }
@@ -57,7 +38,6 @@ namespace Ecran.GUI.Main
             {
                 console.Show(ex.Message);
             }
-
         }
 
         void Browse(object sender, RoutedEventArgs e)
