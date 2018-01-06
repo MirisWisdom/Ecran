@@ -56,6 +56,15 @@
                     VerticalAlignment="Center">
             <Label Content="Resolution:"/>
             <DockPanel>
+                <Label Content="Preset:"
+                       Width="50"/>
+                <ComboBox>
+                    <ComboBoxItem Content="2560x1440"/>
+                    <ComboBoxItem Content="1920x1200"/>
+                    <ComboBoxItem Content="1920x1080"/>
+                </ComboBox>
+            </DockPanel>
+            <DockPanel Margin="0,2,0,0">
                 <Label Content="Width:"
                        Width="50"/>
                 <TextBox VerticalContentAlignment="Center"
@@ -70,7 +79,7 @@
                          Text="{Binding Height}"/>
             </DockPanel>
         </StackPanel>
-        
+
         <!-- Location & Operations -->
         <StackPanel Grid.Row="2"
                     VerticalAlignment="Center"
