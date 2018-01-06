@@ -4,18 +4,18 @@ using System;
 using System.IO;
 using System.Windows;
 
-namespace Ecran.GUI.Main
+namespace Ecran.GUI
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class View : Window
+    public partial class MainWindow : Window
     {
         readonly ConsoleTextBox console;
 
-        readonly ViewModel viewModel;
+        readonly MainViewModel viewModel;
 
-        public View(ViewModel mainView)
+        public MainWindow(MainViewModel mainView)
         {
             InitializeComponent();
             viewModel = mainView;
@@ -34,7 +34,7 @@ namespace Ecran.GUI.Main
                     .ApplyResolution(viewModel.SelectedResolution)
                     .ApplyNewHashing();
 
-                console.Show(Resource.SuccessfulPatch);
+                console.Show(Properties.Resources.SuccessfulPatch);
             }
             catch (Exception ex)
             {
@@ -46,7 +46,7 @@ namespace Ecran.GUI.Main
         {
             var openFileDialog = new OpenFileDialog
             {
-                Filter = Resource.FileFilter
+                Filter = Properties.Resources.FileFilter
             };
 
             if (openFileDialog.ShowDialog() == true)
@@ -70,12 +70,12 @@ namespace Ecran.GUI.Main
 
         private void About(object sender, RoutedEventArgs e)
         {
-            console.Show(Resource.AboutString);
+            console.Show(Properties.Resources.AboutString);
         }
 
         private void Help(object sender, RoutedEventArgs e)
         {
-            console.Show(Resource.HelpString);
+            console.Show(Properties.Resources.HelpString);
         }
     }
 }

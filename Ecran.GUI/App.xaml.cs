@@ -1,5 +1,4 @@
-﻿using Ecran.GUI.Main;
-using System.Windows;
+﻿using System.Windows;
 
 namespace Ecran.GUI
 {
@@ -12,9 +11,9 @@ namespace Ecran.GUI
         {
             base.OnStartup(e);
 
-            var model = new Model();
-            var mainViewModel = new ViewModel(model);
-            var view = new View(mainViewModel);
+            var model = new Main();
+            var mainViewModel = new MainViewModel(model);
+            var view = new MainWindow(mainViewModel);
 
             view.Show();
         }

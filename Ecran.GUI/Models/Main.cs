@@ -1,6 +1,6 @@
-﻿namespace Ecran.GUI.Main
+﻿namespace Ecran.GUI
 {
-    public class Model
+    public class Main
     {
         public Resolution Resolution { get; set; } = new Resolution();
 

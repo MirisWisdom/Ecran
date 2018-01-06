@@ -1,4 +1,4 @@
-﻿namespace Ecran.GUI.Main
+﻿namespace Ecran.GUI
 {
     public class Resolution
     {

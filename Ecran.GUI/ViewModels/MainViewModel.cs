@@ -2,11 +2,11 @@
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-namespace Ecran.GUI.Main
+namespace Ecran.GUI
 {
-    public class ViewModel : INotifyPropertyChanged
+    public class MainViewModel : INotifyPropertyChanged
     {
-        Model model;
+        Main model;
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -15,14 +15,14 @@ namespace Ecran.GUI.Main
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
-        public ViewModel(Model mainModel)
+        public MainViewModel(Main mainModel)
         {
             model = mainModel;
         }
 
         public string Version {
             get {
-                return $"{Resource.Version} // {Resource.Author.ToUpper()}";
+                return $"{Properties.Resources.Version} // {Properties.Resources.Author.ToUpper()}";
             }
         }
 

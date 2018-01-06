@@ -2,7 +2,7 @@
 using Echoic.Checksum;
 using System;
 
-namespace Ecran.GUI.Main
+namespace Ecran.GUI
 {
     class ResolutionPatcher
     {

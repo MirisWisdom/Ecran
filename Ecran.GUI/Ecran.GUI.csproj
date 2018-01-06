@@ -60,7 +60,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="Main\View.xaml">
+    <Page Include="Views\Windows\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -68,18 +68,13 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Controls\ConsoleTextBox.cs" />
-    <Compile Include="Main\Model.cs" />
-    <Compile Include="Main\Resolution.cs" />
-    <Compile Include="Main\ResolutionPatcher.cs" />
-    <Compile Include="Main\Resource.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resource.resx</DependentUpon>
-    </Compile>
-    <Compile Include="Main\ViewModel.cs" />
-    <Compile Include="Main\View.xaml.cs">
-      <DependentUpon>View.xaml</DependentUpon>
+    <Compile Include="Views\Controls\ConsoleTextBox.cs" />
+    <Compile Include="Models\Main.cs" />
+    <Compile Include="Models\Resolution.cs" />
+    <Compile Include="Modules\ResolutionPatcher.cs" />
+    <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="Views\Windows\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -97,12 +92,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="Main\Resource.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resource.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
@@ -126,5 +117,6 @@
   <ItemGroup>
     <Resource Include="icon.ico" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

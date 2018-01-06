@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Controls;
 
-namespace Ecran.GUI.Main
+namespace Ecran.GUI
 {
     class ConsoleTextBox
     {
@@ -14,7 +14,7 @@ namespace Ecran.GUI.Main
 
         public void Show(string message)
         {
-            var output = $"{DateTime.Now.ToString(Resource.TimeFormat)}:\n{message}";
+            var output = $"{DateTime.Now.ToString(Properties.Resources.TimeFormat)}:\n{message}";
 
             if (string.IsNullOrWhiteSpace(textBox.Text))
             {
