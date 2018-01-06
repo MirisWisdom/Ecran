@@ -129,6 +129,9 @@
   <data name="FileFilter" xml:space="preserve">
     <value>Blam files (*.sav)|*.sav</value>
   </data>
+  <data name="HelpString" xml:space="preserve">
+    <value>Select the blam.sav in your Halo CE saves folder, then choose your resolution, then patch!</value>
+  </data>
   <data name="Name" xml:space="preserve">
     <value>hce resolution editor</value>
   </data>

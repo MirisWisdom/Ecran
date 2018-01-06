@@ -78,7 +78,7 @@ namespace Ecran.GUI.Main
             try
             {
                 viewModel.Path = new BlamDetect().Find();
-                console.Show("Detected:\n" + viewModel.Path);
+                console.Show("Detected blam.sav:\n" + viewModel.Path);
             }
             catch (FileNotFoundException ex)
             {
@@ -89,6 +89,11 @@ namespace Ecran.GUI.Main
         private void About(object sender, RoutedEventArgs e)
         {
             console.Show(Resource.AboutString);
+        }
+
+        private void Help(object sender, RoutedEventArgs e)
+        {
+            console.Show(Resource.HelpString);
         }
     }
 }

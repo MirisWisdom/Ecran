@@ -14,7 +14,7 @@ namespace Ecran.GUI.Main
 
         public void Show(string message)
         {
-            var output = $"{DateTime.Now.ToString(Resource.TimeFormat)} :: {message}";
+            var output = $"{DateTime.Now.ToString(Resource.TimeFormat)}:\n{message}";
 
             if (string.IsNullOrWhiteSpace(textBox.Text))
             {

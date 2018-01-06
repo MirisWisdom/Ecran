@@ -6,7 +6,7 @@
         xmlns:Local="clr-namespace:Ecran.GUI.Main"
         mc:Ignorable="d"
         Title="{x:Static Local:Resource.Codename}"
-        Width="240"
+        Width="320"
         WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize"
         SizeToContent="Height" Icon="/Ecran.GUI;component/icon.ico">
@@ -123,13 +123,12 @@
             <Label Content="Output:"/>
             <TextBox Padding="10"
                      Background="#222222"
-                     Height="100"
+                     Height="150"
                      FontFamily="Consolas"
                      Foreground="Gray"
                      IsReadOnly="True"
                      x:Name="ConsoleTextBox"
                      TextWrapping="WrapWithOverflow"
-                     FontSize="10"
                      Text="Welcome!"/>
         </StackPanel>
 
@@ -149,7 +148,7 @@
                         Height="25"
                         Background="White"
                         Margin="1,0,0,0"
-                        Click="Save"/>
+                        Click="Help"/>
             </Grid>
         </StackPanel>
     </Grid>

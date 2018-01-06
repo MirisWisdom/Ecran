@@ -97,6 +97,15 @@ namespace Ecran.GUI.Main {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Select the blam.sav in your Halo CE saves folder, then choose your resolution, then patch!.
+        /// </summary>
+        public static string HelpString {
+            get {
+                return ResourceManager.GetString("HelpString", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to hce resolution editor.
         /// </summary>
         public static string Name {
