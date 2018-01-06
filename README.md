@@ -2,15 +2,18 @@
 <p align="center">
 	<i>A resolution editor for HCE that allows any resolution and resolves refresh rate locks.</i>
 	<br><br>
-	<img src="https://user-images.githubusercontent.com/10241434/34614192-961c5538-f26b-11e7-9f76-81f11f133886.png">
+	<img src="https://user-images.githubusercontent.com/10241434/34639612-049e404a-f31e-11e7-8600-85c2828eaa34.png">
 </p>
 
 ## Features
 
-* Ability to set any custom resolution. On start-up, the display's native resolution is pre-set.
-* Built-in checksum forging for the selected `blam.sav` binary.
+* Ability to set any custom resolution.
+* Ability to choose from preset resolutions. Configuration-driven resolutions list coming soon!
+* Ability to attempt auto-detection and selection of the blam.sav.
 * Removes the necessity of `-video x,y` argument for custom resolutions.
 * Removes the locked framerate that would be used be caused by the `-video` argument.
+* Built-in checksum forging for the selected `blam.sav` binary.
+* Output console for debugging any potential problems/issues.
 
 ## Instructions
 
