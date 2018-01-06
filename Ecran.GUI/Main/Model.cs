@@ -2,15 +2,14 @@
 {
     public class Model
     {
-        public int Width { get; set; }
-        public int Height { get; set; }
+        public Resolution Resolution { get; set; } = new Resolution();
 
         public string Path { get; set; }
 
         public void SetNativeResolution()
         {
-            Width = (int)System.Windows.SystemParameters.PrimaryScreenWidth;
-            Height = (int)System.Windows.SystemParameters.PrimaryScreenHeight;
+            Resolution.Width = (int)System.Windows.SystemParameters.PrimaryScreenWidth;
+            Resolution.Height = (int)System.Windows.SystemParameters.PrimaryScreenHeight;
         }
     }
 }

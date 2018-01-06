@@ -58,10 +58,9 @@
             <DockPanel>
                 <Label Content="Preset:"
                        Width="50"/>
-                <ComboBox>
-                    <ComboBoxItem Content="2560x1440"/>
-                    <ComboBoxItem Content="1920x1200"/>
-                    <ComboBoxItem Content="1920x1080"/>
+                <ComboBox ItemsSource="{Binding Resolutions}"
+                          DisplayMemberPath="Description"
+                          SelectedValue="{Binding SelectedResolution}">
                 </ComboBox>
             </DockPanel>
             <DockPanel Margin="0,2,0,0">
@@ -69,14 +68,14 @@
                        Width="50"/>
                 <TextBox VerticalContentAlignment="Center"
                          MaxLength="5"
-                         Text="{Binding Width}"/>
+                         Text="{Binding SelectedResolution.Width}"/>
             </DockPanel>
             <DockPanel Margin="0,2,0,0">
                 <Label Content="Height:"
                        Width="50"/>
                 <TextBox VerticalContentAlignment="Center"
                          MaxLength="5"
-                         Text="{Binding Height}"/>
+                         Text="{Binding SelectedResolution.Height}"/>
             </DockPanel>
         </StackPanel>
 

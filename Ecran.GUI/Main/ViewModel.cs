@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using System.Collections.Generic;
+using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
 namespace Ecran.GUI.Main
@@ -15,29 +16,27 @@ namespace Ecran.GUI.Main
             }
         }
 
-        public int Width {
+        public Resolution SelectedResolution {
             get {
-                return model.Width;
+                return model.Resolution;
             }
             set {
-                if (value != model.Width)
+                if (value != model.Resolution)
                 {
-                    model.Width = value;
+                    model.Resolution = value;
                     NotifyPropertyChanged();
                 }
             }
         }
 
-        public int Height {
+        public List<Resolution> Resolutions {
             get {
-                return model.Height;
-            }
-            set {
-                if (value != model.Height)
+                return new List<Resolution>
                 {
-                    model.Height = value;
-                    NotifyPropertyChanged();
-                }
+                    new Resolution {Width = 2560, Height = 1440},
+                    new Resolution {Width = 1920, Height = 1200},
+                    new Resolution {Width = 1920, Height = 1080},
+                };
             }
         }
 

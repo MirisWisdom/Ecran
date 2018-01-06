@@ -31,11 +31,11 @@ namespace Ecran.GUI.Main
                 {
                     return new byte[]
                     {
-                    (byte) (viewModel.Width % divideValue),
-                    (byte) (viewModel.Width / divideValue),
+                    (byte) (viewModel.SelectedResolution.Width % divideValue),
+                    (byte) (viewModel.SelectedResolution.Width / divideValue),
 
-                    (byte) (viewModel.Height % divideValue),
-                    (byte) (viewModel.Height / divideValue),
+                    (byte) (viewModel.SelectedResolution.Height % divideValue),
+                    (byte) (viewModel.SelectedResolution.Height / divideValue),
                     };
                 })(), offsetValue);
 
@@ -47,7 +47,8 @@ namespace Ecran.GUI.Main
                 })(), Checksum.FileLength);
 
                 MessageBox.Show("Successfully applied the new resolution!");
-            } catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
