@@ -99,7 +99,8 @@
                         Content="Detect blam.sav"
                         Height="25"
                         Background="White"
-                        Margin="0,0,1,0"/>
+                        Margin="0,0,1,0"
+                        Click="Detect"/>
                 <Button Grid.Column="1"
                         Content="Browse blam.sav"
                         Height="25"

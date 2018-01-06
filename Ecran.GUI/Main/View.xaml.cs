@@ -2,6 +2,7 @@
 using Echoic.Checksum;
 using Microsoft.Win32;
 using System;
+using System.IO;
 using System.Windows;
 
 namespace Ecran.GUI.Main
@@ -31,11 +32,11 @@ namespace Ecran.GUI.Main
                 {
                     return new byte[]
                     {
-                    (byte) (viewModel.SelectedResolution.Width % divideValue),
-                    (byte) (viewModel.SelectedResolution.Width / divideValue),
+                        (byte) (viewModel.SelectedResolution.Width % divideValue),
+                        (byte) (viewModel.SelectedResolution.Width / divideValue),
 
-                    (byte) (viewModel.SelectedResolution.Height % divideValue),
-                    (byte) (viewModel.SelectedResolution.Height / divideValue),
+                        (byte) (viewModel.SelectedResolution.Height % divideValue),
+                        (byte) (viewModel.SelectedResolution.Height / divideValue),
                     };
                 })(), offsetValue);
 
@@ -62,6 +63,18 @@ namespace Ecran.GUI.Main
             if (openFileDialog.ShowDialog() == true)
             {
                 viewModel.Path = openFileDialog.FileName;
+            }
+        }
+
+        private void Detect(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                viewModel.Path = new BlamDetect().Find();
+            }
+            catch (FileNotFoundException ex)
+            {
+                MessageBox.Show("Could not find the necessarily files!");
             }
         }
     }
