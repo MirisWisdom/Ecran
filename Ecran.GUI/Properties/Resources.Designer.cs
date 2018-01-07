@@ -61,7 +61,7 @@ namespace Ecran.GUI.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Natively patch your HCE resolution. Brought to you by Yumiris &amp; Yuviris!.
+        ///   Looks up a localized string similar to Natively patch your HCE resolution. Brought to you by Yumiris &amp; Yuviria!.
         /// </summary>
         public static string AboutString {
             get {
@@ -70,7 +70,7 @@ namespace Ecran.GUI.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to YUMIRIS &amp; YUVIRIS.
+        ///   Looks up a localized string similar to YUMIRIS &amp; YUVIRIA.
         /// </summary>
         public static string Author {
             get {

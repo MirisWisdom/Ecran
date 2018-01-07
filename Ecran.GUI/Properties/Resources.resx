@@ -118,10 +118,10 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AboutString" xml:space="preserve">
-    <value>Natively patch your HCE resolution. Brought to you by Yumiris &amp; Yuviris!</value>
+    <value>Natively patch your HCE resolution. Brought to you by Yumiris &amp; Yuviria!</value>
   </data>
   <data name="Author" xml:space="preserve">
-    <value>YUMIRIS &amp; YUVIRIS</value>
+    <value>YUMIRIS &amp; YUVIRIA</value>
   </data>
   <data name="Codename" xml:space="preserve">
     <value>écran</value>

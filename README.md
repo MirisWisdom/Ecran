@@ -2,7 +2,7 @@
 <p align="center">
 	<i>A resolution editor for HCE that allows any resolution and resolves refresh rate locks.</i>
 	<br><br>
-	<img src="https://user-images.githubusercontent.com/10241434/34639612-049e404a-f31e-11e7-8600-85c2828eaa34.png">
+	<img src="https://user-images.githubusercontent.com/10241434/34647823-75efa7f2-f3c8-11e7-8d7c-d4553388e057.png">
 </p>
 
 ## Features
