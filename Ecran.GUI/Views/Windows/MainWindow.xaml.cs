@@ -19,11 +19,9 @@ namespace Ecran.GUI
         {
             InitializeComponent();
             viewModel = mainView;
+
             DataContext = viewModel;
-
             console = new ConsoleTextBox(ConsoleTextBox);
-
-            viewModel.SelectedResolution = viewModel.Resolutions[0];
         }
 
         void Save(object sender, RoutedEventArgs e)
@@ -31,7 +29,7 @@ namespace Ecran.GUI
             try
             {
                 new ResolutionPatcher(new Blam(viewModel.Path))
-                    .ApplyResolution(viewModel.SelectedResolution)
+                    .ApplyResolution(viewModel.Resolution)
                     .ApplyNewHashing();
 
                 console.Show(Properties.Resources.SuccessfulPatch);

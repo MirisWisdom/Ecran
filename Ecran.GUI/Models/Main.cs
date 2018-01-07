@@ -2,7 +2,7 @@
 {
     public class Main
     {
-        public Resolution Resolution { get; set; } = new Resolution();
+        public Resolution Resolution { get; set; }
 
         public string Path { get; set; }
     }

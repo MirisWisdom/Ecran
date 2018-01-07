@@ -18,6 +18,7 @@ namespace Ecran.GUI
         public MainViewModel(Main mainModel)
         {
             model = mainModel;
+            model.Resolution = Resolutions[0];
         }
 
         public string Version {
@@ -26,14 +27,42 @@ namespace Ecran.GUI
             }
         }
 
-        public Resolution SelectedResolution {
+        public Resolution Resolution {
             get {
                 return model.Resolution;
             }
             set {
                 if (value != model.Resolution)
                 {
+                    Width = value.Width;
+                    Height = value.Height;
                     model.Resolution = value;
+                    NotifyPropertyChanged();
+                }
+            }
+        }
+
+        public int Width {
+            get {
+                return model.Resolution.Width;
+            }
+            set {
+                if (value != model.Resolution.Width)
+                {
+                    model.Resolution = new Resolution(value, Height);
+                    NotifyPropertyChanged();
+                }
+            }
+        }
+
+        public int Height {
+            get {
+                return model.Resolution.Height;
+            }
+            set {
+                if (value != model.Resolution.Height)
+                {
+                    model.Resolution = new Resolution(Width, value);
                     NotifyPropertyChanged();
                 }
             }
@@ -43,26 +72,26 @@ namespace Ecran.GUI
             get {
                 return new List<Resolution>
                 {
-                    new Resolution { Width = 800, Height =  600 },
-                    new Resolution { Width = 1024, Height =  600 },
-                    new Resolution { Width = 1024, Height =  768 },
-                    new Resolution { Width = 1152, Height =  864 },
-                    new Resolution { Width = 1280, Height =  720 },
-                    new Resolution { Width = 1280, Height =  768 },
-                    new Resolution { Width = 1280, Height =  800 },
-                    new Resolution { Width = 1280, Height =  1024 },
-                    new Resolution { Width = 1360, Height =  768 },
-                    new Resolution { Width = 1366, Height =  768 },
-                    new Resolution { Width = 1440, Height =  900 },
-                    new Resolution { Width = 1536, Height =  864 },
-                    new Resolution { Width = 1600, Height =  900 },
-                    new Resolution { Width = 1680, Height =  1050 },
-                    new Resolution { Width = 1920, Height =  1080 },
-                    new Resolution { Width = 1920, Height =  1200 },
-                    new Resolution { Width = 2560, Height =  1080 },
-                    new Resolution { Width = 2560, Height =  1440 },
-                    new Resolution { Width = 3440, Height =  1440 },
-                    new Resolution { Width = 3840, Height =  2160 },
+                    new Resolution(800, 600),
+                    new Resolution(1024, 600),
+                    new Resolution(1024, 768),
+                    new Resolution(1152, 864),
+                    new Resolution(1280, 720),
+                    new Resolution(1280, 768),
+                    new Resolution(1280, 800),
+                    new Resolution(1280, 102),
+                    new Resolution(1360, 768),
+                    new Resolution(1366, 768),
+                    new Resolution(1440, 900),
+                    new Resolution(1536, 864),
+                    new Resolution(1600, 900),
+                    new Resolution(1680, 1050),
+                    new Resolution(1920, 1080),
+                    new Resolution(1920, 1200),
+                    new Resolution(2560, 1080),
+                    new Resolution(2560, 1440),
+                    new Resolution(3440, 1440),
+                    new Resolution(3840, 2160),
                 };
             }
         }
