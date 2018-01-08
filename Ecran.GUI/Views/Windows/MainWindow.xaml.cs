@@ -1,5 +1,4 @@
-﻿using Echoic.Binary;
-using Microsoft.Win32;
+﻿using Microsoft.Win32;
 using System;
 using System.IO;
 using System.Windows;
@@ -25,10 +24,7 @@ namespace Ecran.GUI
         {
             try
             {
-                new ResolutionPatcher(new Blam(ViewModel.Path))
-                    .ApplyResolution(ViewModel.Resolution)
-                    .ApplyNewHashing();
-
+                ViewModel.SaveSettings();
                 console.Show(Properties.Resources.SuccessfulPatch);
             }
             catch (Exception ex)
@@ -47,6 +43,7 @@ namespace Ecran.GUI
             if (openFileDialog.ShowDialog() == true)
             {
                 ViewModel.Path = openFileDialog.FileName;
+                console.Show(Properties.Resources.SelectedBlam + ViewModel.Path);
             }
         }
 
@@ -54,8 +51,8 @@ namespace Ecran.GUI
         {
             try
             {
-                ViewModel.Path = new BlamDetect().Find();
-                console.Show("Detected blam.sav:\n" + ViewModel.Path);
+                ViewModel.DetectBlamsav();
+                console.Show(Properties.Resources.DetectedBlam + ViewModel.Path);
             }
             catch (FileNotFoundException ex)
             {

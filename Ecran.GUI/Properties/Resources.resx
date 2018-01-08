@@ -126,6 +126,9 @@
   <data name="Codename" xml:space="preserve">
     <value>écran</value>
   </data>
+  <data name="DetectedBlam" xml:space="preserve">
+    <value>Detected blam.sav: </value>
+  </data>
   <data name="FileFilter" xml:space="preserve">
     <value>Blam files (*.sav)|*.sav</value>
   </data>
@@ -134,6 +137,9 @@
   </data>
   <data name="Name" xml:space="preserve">
     <value>hce resolution editor</value>
+  </data>
+  <data name="SelectedBlam" xml:space="preserve">
+    <value>Selected blam.sav: </value>
   </data>
   <data name="SuccessfulPatch" xml:space="preserve">
     <value>Successfully applied the new resolution!</value>

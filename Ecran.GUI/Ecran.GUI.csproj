@@ -68,8 +68,9 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Mediators\ModelsMediator.cs" />
+    <Compile Include="Models\Binary.cs" />
     <Compile Include="Views\Controls\ConsoleTextBox.cs" />
-    <Compile Include="Models\Main.cs" />
     <Compile Include="Models\Resolution.cs" />
     <Compile Include="Modules\ResolutionPatcher.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />

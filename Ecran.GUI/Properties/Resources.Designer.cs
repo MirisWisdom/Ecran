@@ -88,6 +88,15 @@ namespace Ecran.GUI.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Detected blam.sav: .
+        /// </summary>
+        public static string DetectedBlam {
+            get {
+                return ResourceManager.GetString("DetectedBlam", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Blam files (*.sav)|*.sav.
         /// </summary>
         public static string FileFilter {
@@ -111,6 +120,15 @@ namespace Ecran.GUI.Properties {
         public static string Name {
             get {
                 return ResourceManager.GetString("Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Selected blam.sav: .
+        /// </summary>
+        public static string SelectedBlam {
+            get {
+                return ResourceManager.GetString("SelectedBlam", resourceCulture);
             }
         }
         

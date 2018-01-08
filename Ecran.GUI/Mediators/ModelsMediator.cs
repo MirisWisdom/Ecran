@@ -1,9 +1,8 @@
 ﻿namespace Ecran.GUI
 {
-    public class Main
+    public class ModelsMediator
     {
         public Resolution Resolution { get; set; }
-
-        public string Path { get; set; }
+        public Binary Binary { get; set; }
     }
 }

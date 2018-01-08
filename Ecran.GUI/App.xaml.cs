@@ -11,7 +11,11 @@ namespace Ecran.GUI
         {
             base.OnStartup(e);
 
-            var viewModel = new MainViewModel(new Main());
+            var viewModel = new MainViewModel(new ModelsMediator
+            {
+                Binary = new Binary(string.Empty),
+                Resolution = new Resolution(800, 600)
+            });
 
             var mainWindow = new MainWindow
             {
