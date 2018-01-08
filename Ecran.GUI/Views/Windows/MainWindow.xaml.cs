@@ -1,4 +1,5 @@
-﻿using Microsoft.Win32;
+﻿using Joli.Commande;
+using Microsoft.Win32;
 using System;
 using System.IO;
 using System.Windows;
@@ -10,14 +11,16 @@ namespace Ecran.GUI
     /// </summary>
     public partial class MainWindow : Window
     {
-        readonly ConsoleTextBox console;
+        readonly IAppendMessage messageConsole;
+        readonly MessageFactory messageFactory;
 
         public MainViewModel ViewModel { get; set; }
 
         public MainWindow()
         {
             InitializeComponent();
-            console = new ConsoleTextBox(ConsoleTextBox);
+            messageConsole = new ConsoleTextBox(ConsoleTextBox);
+            messageFactory = new MessageFactory();
         }
 
         void Save(object sender, RoutedEventArgs e)
@@ -25,11 +28,11 @@ namespace Ecran.GUI
             try
             {
                 ViewModel.SaveSettings();
-                console.Show(Properties.Resources.SuccessfulPatch);
+                Output(Properties.Resources.SuccessfulPatch);
             }
             catch (Exception ex)
             {
-                console.Show(ex.Message);
+                Output(ex.Message);
             }
         }
 
@@ -43,31 +46,36 @@ namespace Ecran.GUI
             if (openFileDialog.ShowDialog() == true)
             {
                 ViewModel.Path = openFileDialog.FileName;
-                console.Show(Properties.Resources.SelectedBlam + ViewModel.Path);
+                Output(Properties.Resources.SelectedBlam + ViewModel.Path);
             }
         }
 
-        private void Detect(object sender, RoutedEventArgs e)
+        void Detect(object sender, RoutedEventArgs e)
         {
             try
             {
                 ViewModel.DetectBlamsav();
-                console.Show(Properties.Resources.DetectedBlam + ViewModel.Path);
+                Output(Properties.Resources.DetectedBlam + ViewModel.Path);
             }
             catch (FileNotFoundException ex)
             {
-                console.Show(ex.Message);
+                Output(ex.Message);
             }
         }
 
-        private void About(object sender, RoutedEventArgs e)
+        void About(object sender, RoutedEventArgs e)
         {
-            console.Show(Properties.Resources.AboutString);
+            Output(Properties.Resources.AboutString);
         }
 
-        private void Help(object sender, RoutedEventArgs e)
+        void Help(object sender, RoutedEventArgs e)
         {
-            console.Show(Properties.Resources.HelpString);
+            Output(Properties.Resources.HelpString);
+        }
+
+        void Output(string message)
+        {
+            messageConsole.Append(messageFactory.GetMessage(message));
         }
     }
 }
