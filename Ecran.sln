@@ -14,6 +14,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Joli.Commande", "Joli.Library\Joli.Commande\Joli.Commande.csproj", "{1F0258E3-C2E4-46C4-9EA4-B4B1D03C5AC5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,6 +34,10 @@ Global
 		{5C905E88-325F-4128-BCDD-1086EF56C727}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5C905E88-325F-4128-BCDD-1086EF56C727}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5C905E88-325F-4128-BCDD-1086EF56C727}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F0258E3-C2E4-46C4-9EA4-B4B1D03C5AC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F0258E3-C2E4-46C4-9EA4-B4B1D03C5AC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F0258E3-C2E4-46C4-9EA4-B4B1D03C5AC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F0258E3-C2E4-46C4-9EA4-B4B1D03C5AC5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

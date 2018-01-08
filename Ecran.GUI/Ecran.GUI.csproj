@@ -42,6 +42,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -70,10 +71,10 @@
     </Compile>
     <Compile Include="Mediators\ModelsMediator.cs" />
     <Compile Include="Models\Binary.cs" />
-    <Compile Include="Views\Controls\ConsoleTextBox.cs" />
     <Compile Include="Models\Resolution.cs" />
     <Compile Include="Modules\ResolutionPatcher.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="Views\Controls\ConsoleTextBox.cs" />
     <Compile Include="Views\Windows\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -113,6 +114,10 @@
     <ProjectReference Include="..\Echoic.Library\Echoic.Checksum\Echoic.Checksum.csproj">
       <Project>{5c905e88-325f-4128-bcdd-1086ef56c727}</Project>
       <Name>Echoic.Checksum</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Joli.Library\Joli.Commande\Joli.Commande.csproj">
+      <Project>{1f0258e3-c2e4-46c4-9ea4-b4b1d03c5ac5}</Project>
+      <Name>Joli.Commande</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
