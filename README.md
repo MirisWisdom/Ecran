@@ -2,7 +2,7 @@
 <p align="center">
 	<i>A resolution editor for HCE that allows any resolution and resolves refresh rate locks.</i>
 	<br><br>
-	<img src="https://user-images.githubusercontent.com/10241434/34647823-75efa7f2-f3c8-11e7-8d7c-d4553388e057.png">
+	<img src="https://user-images.githubusercontent.com/10241434/34657903-aa4a1382-f465-11e7-9a63-a755db5a2bf0.png">
 </p>
 
 ## Features
@@ -17,9 +17,9 @@
 
 ## Instructions
 
-0. Make sure you have at least .NET 4.5 installed!
-1. Launch the tool. Click on `Browse` and navigate to the `blam.sav` of your HCE profile.
-2. Enter your desired solution, and click on `Save`. Enjoy!
+0. Make sure you have at least [.NET 4.5](https://www.microsoft.com/en-au/download/details.aspx?id=30653) installed if you're on Windows 7!
+1. Launch the tool. Click on `Detect Blam.sav` to detect your profile. If that fails, click on `Browse blam.sav` and navigate to the `blam.sav` of your HCE profile.
+2. Enter your desired solution, and click on `Update Profile`. Enjoy!
 
 ## Issues
 
