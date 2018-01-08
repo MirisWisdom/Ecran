@@ -13,14 +13,11 @@ namespace Ecran.GUI
     {
         readonly ConsoleTextBox console;
 
-        readonly MainViewModel viewModel;
+        public MainViewModel ViewModel { get; set; }
 
-        public MainWindow(MainViewModel mainView)
+        public MainWindow()
         {
             InitializeComponent();
-            viewModel = mainView;
-
-            DataContext = viewModel;
             console = new ConsoleTextBox(ConsoleTextBox);
         }
 
@@ -28,8 +25,8 @@ namespace Ecran.GUI
         {
             try
             {
-                new ResolutionPatcher(new Blam(viewModel.Path))
-                    .ApplyResolution(viewModel.Resolution)
+                new ResolutionPatcher(new Blam(ViewModel.Path))
+                    .ApplyResolution(ViewModel.Resolution)
                     .ApplyNewHashing();
 
                 console.Show(Properties.Resources.SuccessfulPatch);
@@ -49,7 +46,7 @@ namespace Ecran.GUI
 
             if (openFileDialog.ShowDialog() == true)
             {
-                viewModel.Path = openFileDialog.FileName;
+                ViewModel.Path = openFileDialog.FileName;
             }
         }
 
@@ -57,8 +54,8 @@ namespace Ecran.GUI
         {
             try
             {
-                viewModel.Path = new BlamDetect().Find();
-                console.Show("Detected blam.sav:\n" + viewModel.Path);
+                ViewModel.Path = new BlamDetect().Find();
+                console.Show("Detected blam.sav:\n" + ViewModel.Path);
             }
             catch (FileNotFoundException ex)
             {

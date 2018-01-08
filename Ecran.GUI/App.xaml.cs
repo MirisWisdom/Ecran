@@ -11,11 +11,15 @@ namespace Ecran.GUI
         {
             base.OnStartup(e);
 
-            var model = new Main();
-            var mainViewModel = new MainViewModel(model);
-            var view = new MainWindow(mainViewModel);
+            var viewModel = new MainViewModel(new Main());
 
-            view.Show();
+            var mainWindow = new MainWindow
+            {
+                ViewModel = viewModel,
+                DataContext = viewModel
+            };
+
+            mainWindow.Show();
         }
     }
 }
