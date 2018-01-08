@@ -16,14 +16,9 @@ namespace Ecran.GUI
         {
             var output = $"{DateTime.Now.ToString(Properties.Resources.TimeFormat)}:\n{message}";
 
-            if (string.IsNullOrWhiteSpace(textBox.Text))
-            {
-                textBox.Text = $"{output}";
-            }
-            else
-            {
-                textBox.Text = $"{output}\n\n{textBox.Text}";
-            }
+            textBox.Text = string.IsNullOrWhiteSpace(textBox.Text)
+                ? $"{output}"
+                : $"{output}\n\n{textBox.Text}";
         }
     }
 }
