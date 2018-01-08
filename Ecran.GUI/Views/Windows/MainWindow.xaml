@@ -130,7 +130,8 @@
                      IsReadOnly="True"
                      x:Name="ConsoleTextBox"
                      TextWrapping="WrapWithOverflow"
-                     Text="Welcome!"/>
+                     Text="Welcome!"
+                     BorderThickness="0"/>
         </StackPanel>
 
         <!-- Additional Information -->
