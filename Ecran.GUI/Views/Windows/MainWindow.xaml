@@ -10,7 +10,6 @@
         WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize"
         SizeToContent="Height"
-        Background="#f9f6fc"
         Icon="/Ecran.GUI;component/icon.ico">
     <Grid Margin="10">
         <Grid.RowDefinitions>
