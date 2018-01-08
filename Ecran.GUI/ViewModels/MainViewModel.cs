@@ -12,6 +12,17 @@ namespace Ecran.GUI
 
         public string Version => $"{Properties.Resources.Version} // {Properties.Resources.Author.ToUpper()}";
 
+        public string Path {
+            get => model.Path;
+            set {
+                if (value != model.Path)
+                {
+                    model.Path = value;
+                    NotifyPropertyChanged();
+                }
+            }
+        }
+
         public Resolution Resolution {
             get => model.Resolution;
             set {
@@ -70,17 +81,6 @@ namespace Ecran.GUI
             new Resolution(3440, 1440),
             new Resolution(3840, 2160),
         };
-
-        public string Path {
-            get => model.Path;
-            set {
-                if (value != model.Path)
-                {
-                    model.Path = value;
-                    NotifyPropertyChanged();
-                }
-            }
-        }
 
         void NotifyPropertyChanged([CallerMemberName] string propertyName = "")
         {
