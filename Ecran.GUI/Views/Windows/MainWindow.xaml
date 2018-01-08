@@ -10,6 +10,7 @@
         WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize"
         SizeToContent="Height"
+        Background="#f9f6fc"
         Icon="/Ecran.GUI;component/icon.ico">
     <Grid Margin="10">
         <Grid.RowDefinitions>
@@ -29,7 +30,7 @@
                        HorizontalAlignment="Center"
                        FontSize="18"
                        FontFamily="Segoe UI Light"
-                       Foreground="#47248e" Padding="0"
+                       Foreground="#1e0f3d" Padding="0"
                        Margin="0,0,2.5,0"></Label>
                 <Label Content="{x:Static Properties:Resources.Name}"
                        HorizontalAlignment="Center"
@@ -123,10 +124,10 @@
                     Margin="0,5,0,0">
             <Label Content="Output:"/>
             <TextBox Padding="10"
-                     Background="#222222"
-                     Height="150"
+                     Background="#0f071d"
+                     Foreground="#7b51d3"
                      FontFamily="Consolas"
-                     Foreground="Gray"
+                     Height="150"
                      IsReadOnly="True"
                      x:Name="ConsoleTextBox"
                      TextWrapping="WrapWithOverflow"
