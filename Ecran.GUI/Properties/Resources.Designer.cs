@@ -133,7 +133,7 @@ namespace Ecran.GUI.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 0.2.1.
+        ///   Looks up a localized string similar to 0.2.2.
         /// </summary>
         public static string Version {
             get {
