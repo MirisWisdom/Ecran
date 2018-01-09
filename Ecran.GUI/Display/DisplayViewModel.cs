@@ -54,7 +54,7 @@ namespace Ecran.GUI
             new Resolution(1280, 720),
             new Resolution(1280, 768),
             new Resolution(1280, 800),
-            new Resolution(1280, 102),
+            new Resolution(1280, 1024),
             new Resolution(1360, 768),
             new Resolution(1366, 768),
             new Resolution(1440, 900),
