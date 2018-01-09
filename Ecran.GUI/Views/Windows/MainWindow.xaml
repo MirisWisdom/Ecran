@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:Properties="clr-namespace:Ecran.GUI.Properties"
+        xmlns:local="clr-namespace:Ecran.GUI"
         mc:Ignorable="d"
         Title="{x:Static Properties:Resources.Codename}"
         Width="320"
@@ -13,8 +14,6 @@
         Icon="/Ecran.GUI;component/icon.ico">
     <Grid Margin="10">
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
@@ -80,78 +79,8 @@
             </DockPanel>
         </StackPanel>
 
-        <!-- Location & Operations -->
-        <StackPanel Grid.Row="2"
-                    VerticalAlignment="Center"
-                    Margin="0,5,0,0">
-            <Label Content="Location:"/>
-            <TextBox
-                VerticalContentAlignment="Center"
-                MaxLength="5"
-                Text="{Binding Path}"
-                Height="25"
-                IsReadOnly="True"/>
-            <Grid Margin="0,2,0,0">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-                <Button Grid.Column="0"
-                        Content="Detect blam.sav"
-                        Height="25"
-                        Background="White"
-                        Margin="0,0,1,0"
-                        Click="Detect"/>
-                <Button Grid.Column="1"
-                        Content="Browse blam.sav"
-                        Height="25"
-                        Background="White"
-                        Margin="1,0,0,0"
-                        Click="Browse"/>
-            </Grid>
-            <Button Content="Update Profile"
-                    Height="25"
-                    Margin="0,2,0,0"
-                    Background="White"
-                    Grid.Column="1"
-                    Click="Save"/>
-        </StackPanel>
-
-        <!-- Debug Output -->
-        <StackPanel Grid.Row="3"
-                    VerticalAlignment="Center"
-                    Margin="0,5,0,0">
-            <Label Content="Output:"/>
-            <TextBox Padding="10"
-                     Background="#0f071d"
-                     Foreground="#7b51d3"
-                     FontFamily="Consolas"
-                     Height="150"
-                     IsReadOnly="True"
-                     x:Name="ConsoleTextBox"
-                     TextWrapping="WrapWithOverflow"
-                     Text="Welcome!"
-                     BorderThickness="0"/>
-        </StackPanel>
-
-        <!-- Additional Information -->
-        <StackPanel Grid.Row="4">
-            <Grid Margin="0,10,0,0">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-                <Button Grid.Column="0" Content="About"
-                        Height="25"
-                        Background="White"
-                        Margin="0,0,1,0"
-                        Click="About"/>
-                <Button Grid.Column="1" Content="Help"
-                        Height="25"
-                        Background="White"
-                        Margin="1,0,0,0"
-                        Click="Help"/>
-            </Grid>
+        <StackPanel Grid.Row="2">
+            <local:ActionsUserControl x:Name="ActionsUc"/>
         </StackPanel>
     </Grid>
 </Window>

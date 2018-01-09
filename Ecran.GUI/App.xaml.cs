@@ -17,13 +17,14 @@ namespace Ecran.GUI
                 Resolution = new Resolution(800, 600)
             });
 
-            var mainWindow = new MainWindow
+            var window = new MainWindow
             {
-                ViewModel = viewModel,
                 DataContext = viewModel
             };
 
-            mainWindow.Show();
+            window.ActionsUc.ViewModel = viewModel;
+
+            window.Show();
         }
     }
 }
