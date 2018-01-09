@@ -15,15 +15,15 @@ namespace Ecran.GUI
         readonly IAppendMessage messageConsole;
         readonly MessageFactory messageFactory;
 
-        MainViewModel viewModel;
+        ViewModelMediator viewModelMediator;
 
-        public MainViewModel ViewModel {
+        public ViewModelMediator ViewModelMediator {
             get {
-                return viewModel;
+                return viewModelMediator;
             }
             set {
-                viewModel = value;
-                DataContext = value;
+                viewModelMediator = value;
+                DataContext = value.ActionsViewModel;
             }
         }
 
@@ -38,7 +38,7 @@ namespace Ecran.GUI
         {
             try
             {
-                viewModel.SaveSettings();
+                viewModelMediator.ActionsViewModel.SaveResolution(viewModelMediator.DisplayViewModel.Resolution);
                 Output(Properties.Resources.SuccessfulPatch);
             }
             catch (Exception ex)
@@ -56,8 +56,8 @@ namespace Ecran.GUI
 
             if (openFileDialog.ShowDialog() == true)
             {
-                viewModel.Path = openFileDialog.FileName;
-                Output(Properties.Resources.SelectedBlam + viewModel.Path);
+                viewModelMediator.ActionsViewModel.Path = openFileDialog.FileName;
+                Output(Properties.Resources.SelectedBlam + viewModelMediator.ActionsViewModel.Path);
             }
         }
 
@@ -65,8 +65,8 @@ namespace Ecran.GUI
         {
             try
             {
-                viewModel.DetectBlamsav();
-                Output(Properties.Resources.DetectedBlam + viewModel.Path);
+                viewModelMediator.ActionsViewModel.DetectBlamsav();
+                Output(Properties.Resources.DetectedBlam + viewModelMediator.ActionsViewModel.Path);
             }
             catch (FileNotFoundException ex)
             {

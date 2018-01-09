@@ -1,72 +1,48 @@
-﻿using Echoic.Binary;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
 namespace Ecran.GUI
 {
-    public class MainViewModel : INotifyPropertyChanged
+    public class DisplayViewModel : INotifyPropertyChanged
     {
-        ModelsMediator modelsMediator;
+        Display display;
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public string Version => $"{Properties.Resources.Version} // {Properties.Resources.Author.ToUpper()}";
-
-        public string Path {
-            get => modelsMediator.Binary.Path;
-            set {
-                if (value != modelsMediator.Binary.Path)
-                {
-                    modelsMediator.Binary = new Binary(value);
-                    NotifyPropertyChanged();
-                }
-            }
-        }
-
         public Resolution Resolution {
-            get => modelsMediator.Resolution;
+            get => display.Resolution;
             set {
-                if (value != modelsMediator.Resolution)
+                if (value != display.Resolution)
                 {
                     Width = value.Width;
                     Height = value.Height;
-                    modelsMediator.Resolution = value;
+                    display.Resolution = value;
                     NotifyPropertyChanged();
                 }
             }
         }
 
         public int Width {
-            get => modelsMediator.Resolution.Width;
+            get => display.Resolution.Width;
             set {
-                if (value != modelsMediator.Resolution.Width)
+                if (value != display.Resolution.Width)
                 {
-                    modelsMediator.Resolution = new Resolution(value, Height);
+                    display.Resolution = new Resolution(value, Height);
                     NotifyPropertyChanged();
                 }
             }
         }
 
         public int Height {
-            get => modelsMediator.Resolution.Height;
+            get => display.Resolution.Height;
             set {
-                if (value != modelsMediator.Resolution.Height)
+                if (value != display.Resolution.Height)
                 {
-                    modelsMediator.Resolution = new Resolution(Width, value);
+                    display.Resolution = new Resolution(Width, value);
                     NotifyPropertyChanged();
                 }
             }
-        }
-
-        public void SaveSettings()
-        {
-            modelsMediator.Binary.Patch(modelsMediator.Resolution);
-        }
-
-        public void DetectBlamsav()
-        {
-            Path = new BlamDetect().Find();
         }
 
         public List<Resolution> Resolutions => new List<Resolution>
@@ -93,14 +69,14 @@ namespace Ecran.GUI
             new Resolution(3840, 2160),
         };
 
+        public DisplayViewModel(Display display)
+        {
+            this.display = display;
+        }
+
         void NotifyPropertyChanged([CallerMemberName] string propertyName = "")
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-
-        public MainViewModel(ModelsMediator modelsMediator)
-        {
-            this.modelsMediator = modelsMediator;
         }
     }
 }

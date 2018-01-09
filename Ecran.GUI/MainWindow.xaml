@@ -51,32 +51,8 @@
             </StackPanel>
         </StackPanel>
 
-        <!-- Video Options -->
-        <StackPanel Grid.Row="1"
-                    VerticalAlignment="Center">
-            <Label Content="Resolution:"/>
-            <DockPanel>
-                <Label Content="Preset:"
-                       Width="50"/>
-                <ComboBox ItemsSource="{Binding Resolutions}"
-                          DisplayMemberPath="Description"
-                          SelectedValue="{Binding Resolution}">
-                </ComboBox>
-            </DockPanel>
-            <DockPanel Margin="0,2,0,0">
-                <Label Content="Width:"
-                       Width="50"/>
-                <TextBox VerticalContentAlignment="Center"
-                         MaxLength="5"
-                         Text="{Binding Width}"/>
-            </DockPanel>
-            <DockPanel Margin="0,2,0,0">
-                <Label Content="Height:"
-                       Width="50"/>
-                <TextBox VerticalContentAlignment="Center"
-                         MaxLength="5"
-                         Text="{Binding Height}"/>
-            </DockPanel>
+        <StackPanel Grid.Row="1">
+            <local:DisplayUserControl x:Name="DisplayUc"/>
         </StackPanel>
 
         <StackPanel Grid.Row="2">

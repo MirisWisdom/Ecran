@@ -61,27 +61,37 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="ActionsUserControl.xaml">
+    <Page Include="Actions\ActionsUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\Windows\MainWindow.xaml">
+    <Page Include="Display\DisplayUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="ActionsUserControl.xaml.cs">
+    <Compile Include="Actions\Actions.cs" />
+    <Compile Include="Actions\ActionsViewModel.cs" />
+    <Compile Include="Actions\ActionsUserControl.xaml.cs">
       <DependentUpon>ActionsUserControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Mediators\ModelsMediator.cs" />
-    <Compile Include="Models\Binary.cs" />
-    <Compile Include="Models\Resolution.cs" />
+    <Compile Include="Display\DisplayUserControl.xaml.cs">
+      <DependentUpon>DisplayUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Display\Display.cs" />
+    <Compile Include="Display\DisplayViewModel.cs" />
+    <Compile Include="Actions\Binary.cs" />
+    <Compile Include="Display\Resolution.cs" />
     <Compile Include="Modules\ResolutionPatcher.cs" />
-    <Compile Include="ViewModels\MainViewModel.cs" />
-    <Compile Include="Views\Windows\MainWindow.xaml.cs">
+    <Compile Include="Mediators\ViewModelMediator.cs" />
+    <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
