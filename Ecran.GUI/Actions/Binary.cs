@@ -1,6 +1,4 @@
-﻿using Echoic.Binary;
-
-namespace Ecran.GUI
+﻿namespace Ecran.GUI
 {
     public class Binary
     {
@@ -15,7 +13,7 @@ namespace Ecran.GUI
 
         public void Patch(Resolution resolution)
         {
-            new ResolutionPatcher(new Blam(this.Path))
+            new ResolutionPatcher(this)
                 .ApplyResolution(resolution)
                 .ApplyNewHashing();
         }

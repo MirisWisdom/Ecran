@@ -11,9 +11,9 @@ namespace Ecran.GUI
 
         Blam blam;
 
-        public ResolutionPatcher(Blam blamBinary)
+        public ResolutionPatcher(Binary binary)
         {
-            blam = blamBinary;
+            blam = new Blam(binary.Path);
         }
 
         public ResolutionPatcher ApplyResolution(Resolution resolution)
