@@ -66,7 +66,7 @@ namespace Ecran.GUI
 
         public void DetectBlamsav()
         {
-            modelsMediator.Binary = new Binary(new BlamDetect().Find());
+            Path = new BlamDetect().Find();
         }
 
         public List<Resolution> Resolutions => new List<Resolution>
