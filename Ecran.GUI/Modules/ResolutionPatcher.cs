@@ -18,17 +18,14 @@ namespace Ecran.GUI
 
         public ResolutionPatcher ApplyResolution(Resolution resolution)
         {
-            blam.Patch(new Func<byte[]>(() =>
+            blam.Patch(new byte[]
             {
-                return new byte[]
-                {
-                    (byte) (resolution.Width % divideValue),
-                    (byte) (resolution.Width / divideValue),
+                (byte) (resolution.Width % divideValue),
+                (byte) (resolution.Width / divideValue),
 
-                    (byte) (resolution.Height % divideValue),
-                    (byte) (resolution.Height / divideValue),
-                };
-            })(), offsetValue);
+                (byte) (resolution.Height % divideValue),
+                (byte) (resolution.Height / divideValue),
+            }, offsetValue);
 
             return this;
         }
@@ -40,7 +37,7 @@ namespace Ecran.GUI
                 var forge = new Forge(blam.Path).Calculate();
                 Array.Reverse(forge);
                 return forge;
-            })(), Checksum.FileLength);
+            })(), Checksum.HashOffset);
         }
     }
 }
