@@ -9,7 +9,7 @@ namespace Ecran.GUI
         readonly int divideValue = (int)Math.Pow(2, 8);
         readonly int offsetValue = 0xA68;
 
-        Blam blam;
+        readonly Blam blam;
 
         public ResolutionPatcher(Binary binary)
         {
@@ -33,7 +33,7 @@ namespace Ecran.GUI
             return this;
         }
 
-        public ResolutionPatcher ApplyNewHashing()
+        public void ApplyNewHashing()
         {
             blam.Patch(new Func<byte[]>(() =>
             {
@@ -41,8 +41,6 @@ namespace Ecran.GUI
                 Array.Reverse(forge);
                 return forge;
             })(), Checksum.FileLength);
-
-            return this;
         }
     }
 }
