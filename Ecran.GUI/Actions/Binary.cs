@@ -10,12 +10,5 @@
         {
             this.path = path;
         }
-
-        public void Patch(Resolution resolution)
-        {
-            new ResolutionPatcher(this)
-                .ApplyResolution(resolution)
-                .ApplyNewHashing();
-        }
     }
 }

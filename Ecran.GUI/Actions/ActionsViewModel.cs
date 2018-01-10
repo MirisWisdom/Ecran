@@ -30,7 +30,9 @@ namespace Ecran.GUI
 
         public void SaveResolution(Resolution resolution)
         {
-            actions.Binary.Patch(resolution);
+            new ResolutionPatcher(actions.Binary)
+                .ApplyResolution(resolution)
+                .ApplyNewHashing();
         }
 
         public void DetectBlamsav()
