@@ -13,7 +13,6 @@ namespace Ecran.GUI
     public partial class ActionsUserControl : UserControl
     {
         readonly IAppendMessage messageConsole;
-        readonly MessageFactory messageFactory;
 
         ViewModelMediator viewModelMediator;
 
@@ -31,7 +30,6 @@ namespace Ecran.GUI
         {
             InitializeComponent();
             messageConsole = new ConsoleTextBox(ConsoleTextBox);
-            messageFactory = new MessageFactory();
         }
 
         void Save(object sender, RoutedEventArgs e)
@@ -86,7 +84,7 @@ namespace Ecran.GUI
 
         void Output(string message)
         {
-            messageConsole.Append(messageFactory.GetMessage(message));
+            messageConsole.Append(MessageFactory.GetMessage(message));
         }
     }
 }
