@@ -34,7 +34,7 @@ namespace Ecran.GUI
         {
             blam.Patch(new Func<byte[]>(() =>
             {
-                var forge = new Forge(blam.Path).Calculate();
+                var forge = new Forge(blam.Path).Calculate(0, Checksum.FileLength - Checksum.HashLength);
                 Array.Reverse(forge);
                 return forge;
             })(), Checksum.HashOffset);
