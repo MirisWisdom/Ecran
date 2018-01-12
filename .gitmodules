@@ -1,9 +1,9 @@
 [submodule "Echoic.Library"]
 	path = Echoic.Library
-	url = git@github.com:yumiris/Echoic.Library.git
+	url = https://github.com/yumiris/Echoic.Library.git
 [submodule "Joli.Library"]
 	path = Joli.Library
-	url = git@github.com:yumiris/Joli.Library.git
+	url = https://github.com/yumiris/Joli.Library.git
 [submodule "HCE.Profile.Persistence"]
 	path = HCE.Profile.Persistence
-	url = git@github.com:yumiris/HCE.Profile.Persistence.git
+	url = https://github.com/yumiris/HCE.Profile.Persistence.git
