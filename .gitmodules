@@ -4,3 +4,6 @@
 [submodule "Joli.Library"]
 	path = Joli.Library
 	url = git@github.com:yumiris/Joli.Library.git
+[submodule "HCE.Profile.Persistence"]
+	path = HCE.Profile.Persistence
+	url = git@github.com:yumiris/HCE.Profile.Persistence.git
