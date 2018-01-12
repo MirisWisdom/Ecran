@@ -12,8 +12,8 @@
 * Ability to set any custom resolution.
 * Ability to choose from preset resolutions. Configuration-driven resolutions list coming soon!
 * Ability to attempt auto-detection and selection of the blam.sav.
-* Removes the necessity of `-video x,y` argument for custom resolutions.
-* Removes the locked framerate that would be used be caused by the `-video` argument.
+* Removes the necessity of `-vidmode x,y` argument for custom resolutions.
+* Removes the locked framerate that would be used be caused by the `-vidmode` argument.
 * Built-in checksum forging for the selected `blam.sav` binary.
 * Output console for debugging any potential problems/issues.
 
