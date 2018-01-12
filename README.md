@@ -9,9 +9,9 @@
 
 ## Features
 
-* Ability to set any custom resolution.
+* Ability to set any custom resolution persistently to the specified HCE profile.
 * Ability to choose from preset resolutions. Configuration-driven resolutions list coming soon!
-* Ability to attempt auto-detection and selection of the blam.sav.
+* Ability to attempt auto-detection and selection of the `blam.sav` file.
 * Removes the necessity of `-vidmode x,y` argument for custom resolutions.
 * Removes the locked framerate that would be used be caused by the `-vidmode` argument.
 * Built-in checksum forging for the selected `blam.sav` binary.
