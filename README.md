@@ -1,7 +1,7 @@
 <h1 align="center">Écran: HCE Resolution Editor</h1>
 <p align="center">
 	<i>A resolution editor for HCE that allows any resolution and resolves refresh rate locks.</i>
-	<br>
+	<br><br>
 	<img src="https://user-images.githubusercontent.com/10241434/34657903-aa4a1382-f465-11e7-9a63-a755db5a2bf0.png">
 	<br>
 	<img src="https://ci.appveyor.com/api/projects/status/isv41b4d477tid28?svg=true">
