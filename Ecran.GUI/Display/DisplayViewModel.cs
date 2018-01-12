@@ -11,7 +11,10 @@ namespace Ecran.GUI
         public event PropertyChangedEventHandler PropertyChanged;
 
         public Resolution Resolution {
-            get => display.Resolution;
+            get {
+                return display.Resolution;
+            }
+
             set {
                 if (value != display.Resolution)
                 {
@@ -24,7 +27,10 @@ namespace Ecran.GUI
         }
 
         public int Width {
-            get => display.Resolution.Width;
+            get {
+                return display.Resolution.Width;
+            }
+
             set {
                 if (value != display.Resolution.Width)
                 {
@@ -35,7 +41,10 @@ namespace Ecran.GUI
         }
 
         public int Height {
-            get => display.Resolution.Height;
+            get {
+                return display.Resolution.Height;
+            }
+
             set {
                 if (value != display.Resolution.Height)
                 {
