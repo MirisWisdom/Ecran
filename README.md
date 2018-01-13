@@ -5,6 +5,8 @@
 	<img src="https://user-images.githubusercontent.com/10241434/34874894-df4ec85c-f7d5-11e7-900b-bc990ad799cc.png">
 	<br><br>
 	<img src="https://ci.appveyor.com/api/projects/status/isv41b4d477tid28?svg=true">
+	<br><br>
+	<a href="https://github.com/yumiris/Ecran/releases/latest">Download</a>
 </p>
 
 ## Features
