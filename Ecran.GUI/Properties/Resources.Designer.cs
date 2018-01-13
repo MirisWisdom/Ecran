@@ -106,6 +106,15 @@ namespace Ecran.GUI.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Failed to detect blam.sav. Please browse for it manually..
+        /// </summary>
+        public static string FileNotFoundError {
+            get {
+                return ResourceManager.GetString("FileNotFoundError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Select the blam.sav in your Halo CE saves folder, then choose your resolution, then patch!.
         /// </summary>
         public static string HelpString {
@@ -120,6 +129,15 @@ namespace Ecran.GUI.Properties {
         public static string Name {
             get {
                 return ResourceManager.GetString("Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to update blam.sav..
+        /// </summary>
+        public static string SaveError {
+            get {
+                return ResourceManager.GetString("SaveError", resourceCulture);
             }
         }
         

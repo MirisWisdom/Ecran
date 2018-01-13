@@ -1,6 +1,5 @@
 ﻿using Joli.Commande;
 using Microsoft.Win32;
-using System;
 using System.IO;
 using System.Windows;
 using System.Windows.Controls;
@@ -12,7 +11,7 @@ namespace Ecran.GUI
     /// </summary>
     public partial class ActionsUserControl : UserControl
     {
-        readonly IAppendMessage messageConsole;
+        readonly ConsoleTextBox messageConsole;
 
         ViewModelMediator viewModelMediator;
 
@@ -39,9 +38,15 @@ namespace Ecran.GUI
                 viewModelMediator.ActionsViewModel.SaveResolution(viewModelMediator.DisplayViewModel.Resolution);
                 Output(Properties.Resources.SuccessfulPatch);
             }
-            catch (Exception ex)
+            catch (FileNotFoundException ex)
             {
-                Output(ex.Message);
+                var saveErrorMessages = new IMessage[]
+                {
+                    MessageFactory.GetMessage(Properties.Resources.SaveError),
+                    MessageFactory.GetMessage(ex.Message, MessageType.PrefixDate),
+                };
+
+                messageConsole.Append(saveErrorMessages, new StarSeparator(length: 39));
             }
         }
 
@@ -68,7 +73,13 @@ namespace Ecran.GUI
             }
             catch (FileNotFoundException ex)
             {
-                Output(ex.Message);
+                var detectionErrorMessages = new IMessage[]
+                {
+                    MessageFactory.GetMessage(Properties.Resources.FileNotFoundError),
+                    MessageFactory.GetMessage(ex.Message, MessageType.PrefixDate),
+                };
+
+                messageConsole.Append(detectionErrorMessages, new StarSeparator(length: 39));
             }
         }
 

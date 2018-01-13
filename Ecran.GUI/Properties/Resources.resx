@@ -132,11 +132,17 @@
   <data name="FileFilter" xml:space="preserve">
     <value>Blam files (*.sav)|*.sav</value>
   </data>
+  <data name="FileNotFoundError" xml:space="preserve">
+    <value>Failed to detect blam.sav. Please browse for it manually.</value>
+  </data>
   <data name="HelpString" xml:space="preserve">
     <value>Select the blam.sav in your Halo CE saves folder, then choose your resolution, then patch!</value>
   </data>
   <data name="Name" xml:space="preserve">
     <value>hce resolution editor</value>
+  </data>
+  <data name="SaveError" xml:space="preserve">
+    <value>Failed to update blam.sav.</value>
   </data>
   <data name="SelectedBlam" xml:space="preserve">
     <value>Selected blam.sav: </value>
