@@ -8,6 +8,8 @@ namespace Ecran.GUI
     {
         Display display;
 
+        readonly List<Resolution> resolutions;
+
         public event PropertyChangedEventHandler PropertyChanged;
 
         public Resolution Resolution {
@@ -54,33 +56,20 @@ namespace Ecran.GUI
             }
         }
 
-        public List<Resolution> Resolutions => new List<Resolution>
-        {
-            new Resolution(800, 600),
-            new Resolution(1024, 600),
-            new Resolution(1024, 768),
-            new Resolution(1152, 864),
-            new Resolution(1280, 720),
-            new Resolution(1280, 768),
-            new Resolution(1280, 800),
-            new Resolution(1280, 1024),
-            new Resolution(1360, 768),
-            new Resolution(1366, 768),
-            new Resolution(1440, 900),
-            new Resolution(1536, 864),
-            new Resolution(1600, 900),
-            new Resolution(1680, 1050),
-            new Resolution(1920, 1080),
-            new Resolution(1920, 1200),
-            new Resolution(2560, 1080),
-            new Resolution(2560, 1440),
-            new Resolution(3440, 1440),
-            new Resolution(3840, 2160),
-        };
+        public List<Resolution> Resolutions {
+            get {
+                return resolutions;
+            }
+        }
 
         public DisplayViewModel(Display display)
         {
             this.display = display;
+        }
+
+        public DisplayViewModel(Display display, List<Resolution> resolutions) : this(display)
+        {
+            this.resolutions = resolutions;
         }
 
         void NotifyPropertyChanged([CallerMemberName] string propertyName = "")
