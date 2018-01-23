@@ -4,8 +4,29 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Ecran.GUI"
-             mc:Ignorable="d"
-             Loaded="Detect" >
+             mc:Ignorable="d">
+    <UserControl.Resources>
+        <Style TargetType="{x:Type Button}">
+            <!-- Original colour -->
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Background" Value="#8346c1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <!-- Colour on hover -->
+                    <Setter Property="Background" Value="#402060"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </UserControl.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>
@@ -24,7 +45,7 @@
                 Text="{Binding Path}"
                 Height="25"
                 IsReadOnly="True"/>
-            <Grid Margin="0,2,0,0">
+            <Grid Margin="0,1,0,0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
                     <ColumnDefinition/>
@@ -32,20 +53,17 @@
                 <Button Grid.Column="0"
                         Content="Detect blam.sav"
                         Height="25"
-                        Background="White"
-                        Margin="0,0,1,0"
+                        Margin="0,0,0.5,0"
                         Click="Detect"/>
                 <Button Grid.Column="1"
                         Content="Browse blam.sav"
                         Height="25"
-                        Background="White"
-                        Margin="1,0,0,0"
+                        Margin="0.5,0,0,0"
                         Click="Browse"/>
             </Grid>
             <Button Content="Update Profile"
                     Height="25"
-                    Margin="0,2,0,0"
-                    Background="White"
+                    Margin="0,1,0,0"
                     Grid.Column="1"
                     Click="Save"/>
         </StackPanel>
@@ -76,13 +94,11 @@
                 </Grid.ColumnDefinitions>
                 <Button Grid.Column="0" Content="About"
                         Height="25"
-                        Background="White"
-                        Margin="0,0,1,0"
+                        Margin="0,0,0.5,0"
                         Click="About"/>
                 <Button Grid.Column="1" Content="Help"
                         Height="25"
-                        Background="White"
-                        Margin="1,0,0,0"
+                        Margin="0.5,0,0,0"
                         Click="Help"/>
             </Grid>
         </StackPanel>

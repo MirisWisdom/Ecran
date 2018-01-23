@@ -17,14 +17,14 @@
                           SelectedValue="{Binding Resolution}">
                 </ComboBox>
             </DockPanel>
-            <DockPanel Margin="0,2,0,0">
+            <DockPanel Margin="0,1,0,0">
                 <Label Content="Width:"
                        Width="50"/>
                 <TextBox VerticalContentAlignment="Center"
                          MaxLength="5"
                          Text="{Binding Width}"/>
             </DockPanel>
-            <DockPanel Margin="0,2,0,0">
+            <DockPanel Margin="0,1,0,0">
                 <Label Content="Height:"
                        Width="50"/>
                 <TextBox VerticalContentAlignment="Center"

@@ -11,7 +11,8 @@
         WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize"
         SizeToContent="Height"
-        Icon="/Ecran.GUI;component/icon.ico">
+        Icon="/Ecran.GUI;component/icon.ico"
+             SnapsToDevicePixels="True">
     <Grid Margin="10">
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
