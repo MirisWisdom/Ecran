@@ -154,6 +154,6 @@
     <value>h:mm:ss tt</value>
   </data>
   <data name="Version" xml:space="preserve">
-    <value>0.3.0</value>
+    <value>0.3.2</value>
   </data>
 </root>
