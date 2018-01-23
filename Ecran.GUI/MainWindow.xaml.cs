@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System.Reflection;
+using System.Windows;
 
 namespace Ecran.GUI
 {
@@ -10,6 +11,9 @@ namespace Ecran.GUI
         public MainWindow()
         {
             InitializeComponent();
+
+            var version = Assembly.GetExecutingAssembly().GetName().Version;
+            VersionLabel.Content = $"{version.Major}.{version.Minor}.{version.Build}.{version.Revision}";
         }
     }
 }

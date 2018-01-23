@@ -40,7 +40,8 @@
             </StackPanel>
             <StackPanel Orientation="Horizontal"
                         HorizontalAlignment="Center">
-                <Label Content="{x:Static Properties:Resources.Version}"
+                <Label x:Name="VersionLabel"
+                       Content="0.3.0"
                        HorizontalAlignment="Center"
                        Foreground="#d3d3d3"/>
                 <Label Content="//"
