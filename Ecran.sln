@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2009
+VisualStudioVersion = 15.0.27130.2024
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ecran.GUI", "Ecran.GUI\Ecran.GUI.csproj", "{AFBBCA08-A3DA-44A5-9487-0438DF956DA1}"
 EndProject
@@ -18,6 +18,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Joli.Commande", "Joli.Library\Joli.Commande\Joli.Commande.csproj", "{1F0258E3-C2E4-46C4-9EA4-B4B1D03C5AC5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{B47A6F37-73AC-4F00-A310-0602096C94A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ecran.Library", "Ecran.Library\Ecran.Library.csproj", "{92DC27BF-E516-4C06-8A09-D77BCFAAD34B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +43,10 @@ Global
 		{1F0258E3-C2E4-46C4-9EA4-B4B1D03C5AC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1F0258E3-C2E4-46C4-9EA4-B4B1D03C5AC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1F0258E3-C2E4-46C4-9EA4-B4B1D03C5AC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92DC27BF-E516-4C06-8A09-D77BCFAAD34B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92DC27BF-E516-4C06-8A09-D77BCFAAD34B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92DC27BF-E516-4C06-8A09-D77BCFAAD34B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92DC27BF-E516-4C06-8A09-D77BCFAAD34B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

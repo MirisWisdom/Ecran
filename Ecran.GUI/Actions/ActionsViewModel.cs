@@ -1,6 +1,5 @@
 ﻿using Echoic.Binary;
-using Ecran.GUI.Display;
-using Ecran.GUI.Modules;
+using Ecran.Library;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
@@ -30,7 +29,7 @@ namespace Ecran.GUI.Actions
 
         public void SaveResolution(Resolution resolution)
         {
-            new ResolutionPatcher(_actions.Binary)
+            new ResolutionPatcher(_actions.Binary.Path)
                 .ApplyResolution(resolution)
                 .ApplyNewHashing();
         }

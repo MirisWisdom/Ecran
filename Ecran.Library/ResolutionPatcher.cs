@@ -1,21 +1,19 @@
 ﻿using Echoic.Binary;
 using Echoic.Checksum;
-using Ecran.GUI.Actions;
-using Ecran.GUI.Display;
 using System;
 
-namespace Ecran.GUI.Modules
+namespace Ecran.Library
 {
-    internal class ResolutionPatcher
+    public class ResolutionPatcher
     {
         private readonly int _divideValue = (int)Math.Pow(2, 8);
         private readonly int _offsetValue = 0xA68;
 
         private readonly Blam _blam;
 
-        public ResolutionPatcher(Binary binary)
+        public ResolutionPatcher(string binaryPath)
         {
-            _blam = new Blam(binary.Path);
+            _blam = new Blam(binaryPath);
         }
 
         public ResolutionPatcher ApplyResolution(Resolution resolution)

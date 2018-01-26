@@ -1,4 +1,6 @@
-﻿namespace Ecran.GUI.Display
+﻿using Ecran.Library;
+
+namespace Ecran.GUI.Display
 {
     public class Display
     {

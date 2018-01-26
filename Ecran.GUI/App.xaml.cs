@@ -1,6 +1,7 @@
 ﻿using Ecran.GUI.Actions;
 using Ecran.GUI.Display;
 using Ecran.GUI.Mediators;
+using Ecran.Library;
 using System.Collections.Generic;
 using System.Windows;
 
