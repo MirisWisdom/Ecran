@@ -1,14 +1,14 @@
-﻿namespace Ecran.GUI
+﻿namespace Ecran.GUI.Actions
 {
     public class Binary
     {
-        readonly string path;
+        private readonly string _path;
 
-        public string Path => path;
+        public string Path => _path;
 
         public Binary(string path)
         {
-            this.path = path;
+            _path = path;
         }
     }
 }

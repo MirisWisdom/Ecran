@@ -1,20 +1,19 @@
-﻿using System.Windows.Controls;
+﻿using Ecran.GUI.Mediators;
+using System.Windows.Controls;
 
-namespace Ecran.GUI
+namespace Ecran.GUI.Display
 {
     /// <summary>
     /// Interaction logic for DisplayUserControl.xaml
     /// </summary>
     public partial class DisplayUserControl : UserControl
     {
-        ViewModelMediator viewModelMediator;
+        private ViewModelMediator _viewModelMediator;
 
         public ViewModelMediator ViewModelMediator {
-            get {
-                return viewModelMediator;
-            }
+            get => _viewModelMediator;
             set {
-                viewModelMediator = value;
+                _viewModelMediator = value;
                 DataContext = value.DisplayViewModel;
             }
         }

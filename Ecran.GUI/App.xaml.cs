@@ -1,4 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using Ecran.GUI.Actions;
+using Ecran.GUI.Display;
+using Ecran.GUI.Mediators;
+using System.Collections.Generic;
 using System.Windows;
 
 namespace Ecran.GUI
@@ -36,12 +39,12 @@ namespace Ecran.GUI
                 new Resolution(3840, 2160),
             };
 
-            var initialDisplay = new Display
+            var initialDisplay = new Display.Display
             {
                 Resolution = availableResolutions[0]
             };
 
-            var initialActions = new Actions
+            var initialActions = new Actions.Actions
             {
                 Binary = new Binary(string.Empty)
             };

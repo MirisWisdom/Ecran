@@ -4,7 +4,9 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:Properties="clr-namespace:Ecran.GUI.Properties"
-        xmlns:local="clr-namespace:Ecran.GUI"
+        xmlns:local="clr-namespace:Ecran.GUI" 
+        xmlns:display="clr-namespace:Ecran.GUI.Display" 
+        xmlns:actions="clr-namespace:Ecran.GUI.Actions"
         mc:Ignorable="d"
         Title="{x:Static Properties:Resources.Codename}"
         Width="320"
@@ -54,11 +56,11 @@
         </StackPanel>
 
         <StackPanel Grid.Row="1">
-            <local:DisplayUserControl x:Name="DisplayUc"/>
+            <display:DisplayUserControl x:Name="DisplayUc"/>
         </StackPanel>
 
         <StackPanel Grid.Row="2">
-            <local:ActionsUserControl x:Name="ActionsUc"/>
+            <actions:ActionsUserControl x:Name="ActionsUc"/>
         </StackPanel>
     </Grid>
 </Window>

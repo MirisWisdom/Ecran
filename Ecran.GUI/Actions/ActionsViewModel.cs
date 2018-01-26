@@ -1,23 +1,23 @@
 ﻿using Echoic.Binary;
+using Ecran.GUI.Display;
+using Ecran.GUI.Modules;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-namespace Ecran.GUI
+namespace Ecran.GUI.Actions
 {
     public class ActionsViewModel : INotifyPropertyChanged
     {
-        readonly Actions actions;
+        private readonly Actions _actions;
 
         public event PropertyChangedEventHandler PropertyChanged;
 
         public string Path {
-            get {
-                return actions.Binary.Path;
-            }
+            get => _actions.Binary.Path;
             set {
-                if (value != actions.Binary.Path)
+                if (value != _actions.Binary.Path)
                 {
-                    actions.Binary = new Binary(value);
+                    _actions.Binary = new Binary(value);
                     NotifyPropertyChanged();
                 }
             }
@@ -25,12 +25,12 @@ namespace Ecran.GUI
 
         public ActionsViewModel(Actions actions)
         {
-            this.actions = actions;
+            _actions = actions;
         }
 
         public void SaveResolution(Resolution resolution)
         {
-            new ResolutionPatcher(actions.Binary)
+            new ResolutionPatcher(_actions.Binary)
                 .ApplyResolution(resolution)
                 .ApplyNewHashing();
         }
@@ -40,7 +40,7 @@ namespace Ecran.GUI
             Path = new BlamDetect().Find();
         }
 
-        void NotifyPropertyChanged([CallerMemberName] string propertyName = "")
+        private void NotifyPropertyChanged([CallerMemberName] string propertyName = "")
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }

@@ -1,4 +1,4 @@
-﻿namespace Ecran.GUI
+﻿namespace Ecran.GUI.Actions
 {
     public class Actions
     {

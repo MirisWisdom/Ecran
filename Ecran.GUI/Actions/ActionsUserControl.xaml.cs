@@ -1,26 +1,25 @@
-﻿using Joli.Commande;
+﻿using Ecran.GUI.Mediators;
+using Joli.Commande;
 using Microsoft.Win32;
 using System.IO;
 using System.Windows;
 using System.Windows.Controls;
 
-namespace Ecran.GUI
+namespace Ecran.GUI.Actions
 {
     /// <summary>
     /// Interaction logic for ActionsUserControl.xaml
     /// </summary>
     public partial class ActionsUserControl : UserControl
     {
-        readonly ConsoleTextBox messageConsole;
+        private readonly ConsoleTextBox _messageConsole;
 
-        ViewModelMediator viewModelMediator;
+        private ViewModelMediator _viewModelMediator;
 
         public ViewModelMediator ViewModelMediator {
-            get {
-                return viewModelMediator;
-            }
+            get => _viewModelMediator;
             set {
-                viewModelMediator = value;
+                _viewModelMediator = value;
                 DataContext = value.ActionsViewModel;
             }
         }
@@ -28,14 +27,14 @@ namespace Ecran.GUI
         public ActionsUserControl()
         {
             InitializeComponent();
-            messageConsole = new ConsoleTextBox(ConsoleTextBox);
+            _messageConsole = new ConsoleTextBox(ConsoleTextBox);
         }
 
-        void Save(object sender, RoutedEventArgs e)
+        private void Save(object sender, RoutedEventArgs e)
         {
             try
             {
-                viewModelMediator.ActionsViewModel.SaveResolution(viewModelMediator.DisplayViewModel.Resolution);
+                _viewModelMediator.ActionsViewModel.SaveResolution(_viewModelMediator.DisplayViewModel.Resolution);
                 Output(Properties.Resources.SuccessfulPatch);
             }
             catch (FileNotFoundException ex)
@@ -46,11 +45,11 @@ namespace Ecran.GUI
                     MessageFactory.GetMessage(ex.Message, MessageType.PrefixDate),
                 };
 
-                messageConsole.Append(saveErrorMessages, new StarSeparator(length: 39));
+                _messageConsole.Append(saveErrorMessages, new StarSeparator(length: 39));
             }
         }
 
-        void Browse(object sender, RoutedEventArgs e)
+        private void Browse(object sender, RoutedEventArgs e)
         {
             var openFileDialog = new OpenFileDialog
             {
@@ -59,17 +58,17 @@ namespace Ecran.GUI
 
             if (openFileDialog.ShowDialog() == true)
             {
-                viewModelMediator.ActionsViewModel.Path = openFileDialog.FileName;
-                Output(Properties.Resources.SelectedBlam + viewModelMediator.ActionsViewModel.Path);
+                _viewModelMediator.ActionsViewModel.Path = openFileDialog.FileName;
+                Output(Properties.Resources.SelectedBlam + _viewModelMediator.ActionsViewModel.Path);
             }
         }
 
-        void Detect(object sender, RoutedEventArgs e)
+        private void Detect(object sender, RoutedEventArgs e)
         {
             try
             {
-                viewModelMediator.ActionsViewModel.DetectBlamsav();
-                Output(Properties.Resources.DetectedBlam + viewModelMediator.ActionsViewModel.Path);
+                _viewModelMediator.ActionsViewModel.DetectBlamsav();
+                Output(Properties.Resources.DetectedBlam + _viewModelMediator.ActionsViewModel.Path);
             }
             catch (FileNotFoundException ex)
             {
@@ -79,23 +78,23 @@ namespace Ecran.GUI
                     MessageFactory.GetMessage(ex.Message, MessageType.PrefixDate),
                 };
 
-                messageConsole.Append(detectionErrorMessages, new StarSeparator(length: 39));
+                _messageConsole.Append(detectionErrorMessages, new StarSeparator(length: 39));
             }
         }
 
-        void About(object sender, RoutedEventArgs e)
+        private void About(object sender, RoutedEventArgs e)
         {
             Output(Properties.Resources.AboutString);
         }
 
-        void Help(object sender, RoutedEventArgs e)
+        private void Help(object sender, RoutedEventArgs e)
         {
             Output(Properties.Resources.HelpString);
         }
 
-        void Output(string message)
+        private void Output(string message)
         {
-            messageConsole.Append(MessageFactory.GetMessage(message));
+            _messageConsole.Append(MessageFactory.GetMessage(message));
         }
     }
 }

@@ -2,77 +2,67 @@
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-namespace Ecran.GUI
+namespace Ecran.GUI.Display
 {
     public class DisplayViewModel : INotifyPropertyChanged
     {
-        Display display;
+        private Display _display;
 
-        readonly List<Resolution> resolutions;
+        private readonly List<Resolution> _resolutions;
 
         public event PropertyChangedEventHandler PropertyChanged;
 
         public Resolution Resolution {
-            get {
-                return display.Resolution;
-            }
+            get => _display.Resolution;
 
             set {
-                if (value != display.Resolution)
+                if (value != _display.Resolution)
                 {
                     Width = value.Width;
                     Height = value.Height;
-                    display.Resolution = value;
+                    _display.Resolution = value;
                     NotifyPropertyChanged();
                 }
             }
         }
 
         public int Width {
-            get {
-                return display.Resolution.Width;
-            }
+            get => _display.Resolution.Width;
 
             set {
-                if (value != display.Resolution.Width)
+                if (value != _display.Resolution.Width)
                 {
-                    display.Resolution = new Resolution(value, Height);
+                    _display.Resolution = new Resolution(value, Height);
                     NotifyPropertyChanged();
                 }
             }
         }
 
         public int Height {
-            get {
-                return display.Resolution.Height;
-            }
+            get => _display.Resolution.Height;
 
             set {
-                if (value != display.Resolution.Height)
+                if (value != _display.Resolution.Height)
                 {
-                    display.Resolution = new Resolution(Width, value);
+                    _display.Resolution = new Resolution(Width, value);
                     NotifyPropertyChanged();
                 }
             }
         }
 
-        public List<Resolution> Resolutions {
-            get {
-                return resolutions;
-            }
-        }
+        public List<Resolution> Resolutions => _resolutions;
 
         public DisplayViewModel(Display display)
         {
-            this.display = display;
+            _display = display;
         }
 
         public DisplayViewModel(Display display, List<Resolution> resolutions) : this(display)
         {
-            this.resolutions = resolutions;
+            _resolutions = resolutions;
         }
 
-        void NotifyPropertyChanged([CallerMemberName] string propertyName = "")
+        private void NotifyPropertyChanged([CallerMemberName] string propertyName = "")
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }

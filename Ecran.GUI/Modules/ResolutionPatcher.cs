@@ -1,40 +1,42 @@
 ﻿using Echoic.Binary;
 using Echoic.Checksum;
+using Ecran.GUI.Actions;
+using Ecran.GUI.Display;
 using System;
 
-namespace Ecran.GUI
+namespace Ecran.GUI.Modules
 {
-    class ResolutionPatcher
+    internal class ResolutionPatcher
     {
-        readonly int divideValue = (int)Math.Pow(2, 8);
-        readonly int offsetValue = 0xA68;
+        private readonly int _divideValue = (int)Math.Pow(2, 8);
+        private readonly int _offsetValue = 0xA68;
 
-        readonly Blam blam;
+        private readonly Blam _blam;
 
         public ResolutionPatcher(Binary binary)
         {
-            blam = new Blam(binary.Path);
+            _blam = new Blam(binary.Path);
         }
 
         public ResolutionPatcher ApplyResolution(Resolution resolution)
         {
-            blam.Patch(new byte[]
+            _blam.Patch(new byte[]
             {
-                (byte) (resolution.Width % divideValue),
-                (byte) (resolution.Width / divideValue),
+                (byte) (resolution.Width % _divideValue),
+                (byte) (resolution.Width / _divideValue),
 
-                (byte) (resolution.Height % divideValue),
-                (byte) (resolution.Height / divideValue),
-            }, offsetValue);
+                (byte) (resolution.Height % _divideValue),
+                (byte) (resolution.Height / _divideValue),
+            }, _offsetValue);
 
             return this;
         }
 
         public void ApplyNewHashing()
         {
-            blam.Patch(new Func<byte[]>(() =>
+            _blam.Patch(new Func<byte[]>(() =>
             {
-                var forge = new Forge(blam.Path).Calculate(0, Checksum.FileLength - Checksum.HashLength);
+                var forge = new Forge(_blam.Path).Calculate(0, Checksum.FileLength - Checksum.HashLength);
                 Array.Reverse(forge);
                 return forge;
             })(), Checksum.HashOffset);
