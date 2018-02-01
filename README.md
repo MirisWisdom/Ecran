@@ -1,6 +1,6 @@
 <h1 align="center">Écran: HCE Resolution Editor</h1>
 <p align="center">
-	<i>A resolution editor for HCE that allows any resolution and resolves refresh rate locks.</i>
+	A resolution editor for HCE that allows any resolution and resolves refresh rate locks.
 	<br><br>
 	<img src="https://user-images.githubusercontent.com/10241434/35439350-47689e40-02d5-11e8-98c8-954cf0a3e49d.png">
 	<br><br>
