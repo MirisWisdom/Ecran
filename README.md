@@ -2,7 +2,7 @@
 <p align="center">
 	A resolution editor for HCE that allows any resolution and resolves refresh rate locks.
 	<br><br>
-	<img src="https://user-images.githubusercontent.com/10241434/35439350-47689e40-02d5-11e8-98c8-954cf0a3e49d.png">
+	<img src="https://user-images.githubusercontent.com/10241434/56513691-d61f7980-6565-11e9-8a1a-1579bee56659.png">
 	<br><br>
 	<img src="https://ci.appveyor.com/api/projects/status/isv41b4d477tid28?svg=true">
 	<br><br>
@@ -11,19 +11,20 @@
 
 ## Features
 
+* Ability to automatically detect your native screen resolution for quick patching.
 * Ability to set any custom resolution persistently to the specified HCE profile.
-* Ability to choose from preset resolutions. Configuration-driven resolutions list coming soon!
 * Ability to attempt auto-detection and selection of the `blam.sav` file.
 * Removes the necessity of `-vidmode x,y` argument for custom resolutions.
 * Removes the locked framerate that would be used be caused by the `-vidmode` argument.
-* Built-in checksum forging for the selected `blam.sav` binary.
-* Output console for debugging any potential problems/issues.
+* Outputs debugging information to the built-in console for any potential problems/issues.
 
 ## Instructions
 
-0. Make sure you have at least [.NET 4.5](https://www.microsoft.com/en-au/download/details.aspx?id=30653) installed if you're on Windows 7!
-1. Launch the tool. Click on `Detect Blam.sav` to detect your profile. If that fails, click on `Browse blam.sav` and navigate to the `blam.sav` of your HCE profile.
-2. Enter your desired solution, and click on `Update Profile`. Enjoy!
+1. Launch the tool and let it auto-detect your profile.
+2. Enter your desired solution, or leave the one that was detected for your screen.
+3. Click on `Apply Resolution`, and enjoy!
+
+If profile detction fails, click on `Browse` and navigate to the `blam.sav` of your HCE profile.
 
 ## Issues
 

@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>Ecran.GUI</RootNamespace>
     <AssemblyName>Ecran.GUI</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
@@ -54,6 +54,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -73,40 +74,22 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="Actions\ActionsUserControl.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Display\DisplayUserControl.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="Actions\Actions.cs" />
-    <Compile Include="Actions\ActionsViewModel.cs" />
-    <Compile Include="Actions\ActionsUserControl.xaml.cs">
-      <DependentUpon>ActionsUserControl.xaml</DependentUpon>
-    </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Display\DisplayUserControl.xaml.cs">
-      <DependentUpon>DisplayUserControl.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Display\Display.cs" />
-    <Compile Include="Display\DisplayViewModel.cs" />
-    <Compile Include="Actions\Binary.cs" />
-    <Compile Include="Mediators\ViewModelMediator.cs" />
+    <Compile Include="Main.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -133,26 +116,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Echoic.Library\Echoic.Binary\Echoic.Binary.csproj">
-      <Project>{786bf655-fc01-4bb1-a429-3ac3f55caa31}</Project>
-      <Name>Echoic.Binary</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Echoic.Library\Echoic.Checksum\Echoic.Checksum.csproj">
-      <Project>{5c905e88-325f-4128-bcdd-1086ef56c727}</Project>
-      <Name>Echoic.Checksum</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Ecran.Library\Ecran.Library.csproj">
-      <Project>{92dc27bf-e516-4c06-8a09-d77bcfaad34b}</Project>
-      <Name>Ecran.Library</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Joli.Library\Joli.Commande\Joli.Commande.csproj">
-      <Project>{1f0258e3-c2e4-46c4-9ea4-b4b1d03c5ac5}</Project>
-      <Name>Joli.Commande</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="icon.ico" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\SPV3.CLI\src\SPV3.CLI.csproj">
+      <Project>{acaa5d9f-b23d-43e1-b2df-8c03230975a1}</Project>
+      <Name>SPV3.CLI</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,9 +1,0 @@
-[submodule "Echoic.Library"]
-	path = Echoic.Library
-	url = https://github.com/yumiris/Echoic.Library.git
-[submodule "Joli.Library"]
-	path = Joli.Library
-	url = https://github.com/yumiris/Joli.Library.git
-[submodule "HCE.Profile.Persistence"]
-	path = HCE.Profile.Persistence
-	url = https://github.com/yumiris/HCE.Profile.Persistence.git
