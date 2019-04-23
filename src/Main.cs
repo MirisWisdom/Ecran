@@ -30,6 +30,7 @@ namespace HCE.Ecran
   {
     private int _width  = Screen.PrimaryScreen.Bounds.Width;
     private int _height = Screen.PrimaryScreen.Bounds.Height;
+    private int _rate   = 60;
 
     private string _path;
 
@@ -51,6 +52,17 @@ namespace HCE.Ecran
       {
         if (value == _height) return;
         _height = value;
+        OnPropertyChanged();
+      }
+    }
+
+    public int Rate
+    {
+      get => _rate;
+      set
+      {
+        if (value == _rate) return;
+        _rate = value;
         OnPropertyChanged();
       }
     }
@@ -78,6 +90,7 @@ namespace HCE.Ecran
       profile.Load();
       profile.Video.Resolution.Width  = (ushort) Width;
       profile.Video.Resolution.Height = (ushort) Height;
+      profile.Video.RefreshRate       = (byte) Rate;
       profile.Save();
     }
 
