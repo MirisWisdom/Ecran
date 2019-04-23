@@ -21,10 +21,10 @@
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using Ecran.GUI.Properties;
+using HCE.Ecran.Properties;
 using SPV3.CLI;
 
-namespace Ecran.GUI
+namespace HCE.Ecran
 {
   public sealed class Main : INotifyPropertyChanged
   {

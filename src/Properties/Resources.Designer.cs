@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Ecran.GUI.Properties {
+namespace HCE.Ecran.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace Ecran.GUI.Properties {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Ecran.GUI.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("HCE.Ecran.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -169,7 +169,7 @@ namespace Ecran.GUI.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 0.3.2.
+        ///   Looks up a localized string similar to 0.4.0.
         /// </summary>
         public static string Version {
             get {

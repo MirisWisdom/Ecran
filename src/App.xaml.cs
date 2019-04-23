@@ -20,7 +20,7 @@
 
 using System.Windows;
 
-namespace Ecran.GUI
+namespace HCE.Ecran
 {
   /// <summary>
   ///   Interaction logic for App.xaml

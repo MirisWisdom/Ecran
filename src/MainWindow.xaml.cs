@@ -19,12 +19,11 @@
  */
 
 using System;
-using System.IO;
 using System.Reflection;
 using System.Windows;
 using Microsoft.Win32;
 
-namespace Ecran.GUI
+namespace HCE.Ecran
 {
   /// <summary>
   ///   Interaction logic for MainWindow.xaml
