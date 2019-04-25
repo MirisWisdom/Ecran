@@ -23,7 +23,7 @@ using System.Reflection;
 using System.Windows;
 using Microsoft.Win32;
 
-namespace HCE.Ecran
+namespace Ecran
 {
   /// <summary>
   ///   Interaction logic for MainWindow.xaml

@@ -28,7 +28,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace HCE.Ecran.Properties
+namespace Ecran.Properties
 {
 
 

@@ -25,7 +25,7 @@ using System.Windows;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Ecran.GUI")]
+[assembly: AssemblyTitle("Resolution editor for HCE")]
 [assembly: AssemblyDescription("Resolution editor for HCE")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("yumiris & yuviria")]
